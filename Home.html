@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEZ Systems México | Consultoría y Gestión Normativa</title>
+<meta name="description" content="DEZ Systems México — Consultoría integral en seguridad laboral, medio ambiente, protección civil y proyectos de construcción. Cumplimiento STPS, ISO y más.">
+<meta name="keywords" content="consultoría STPS, seguridad laboral, ISO 9001 14001 45001, protección civil, dictámenes, señalética, EPP, México">
+<meta property="og:title" content="DEZ Systems México | Consultoría Normativa">
+<meta property="og:description" content="Tu aliado en cumplimiento normativo. Seguridad, ambiente y construcción.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dezsystemsmexico.com">
+<link rel="canonical" href="https://dezsystemsmexico.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & ROOT ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+@font-face {
+    font-family: 'Myriad';
+    src: url('./fonts/MYRIADPRO.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nasalization';
+    src: url('./fonts/Nasalization.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --lime:    #97c00e;
+  --lime-dk: #7aa00b;
+  --lime-lt: #b8de3a;
+  --navy:    #234350;
+  --navy-dk: #172c37;
+  --navy-lt: #2e5a6e;
+  --blue:    #2c5ca2;
+  --white:   #ffffff;
+  --off:     #f5f7f4;
+  --gray:    #e8eceb;
+  --muted:   #6b7f79;
+  --dark:    #111c20;
+
+  --font-title: 'Nasalization', sans-serif;
+  --font-body: 'Myriad', sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 2px 8px rgba(35,67,80,0.08);
+  --shadow-md: 0 8px 32px rgba(35,67,80,0.12);
+  --shadow-lg: 0 20px 60px rgba(35,67,80,0.18);
+
+  --max: 1200px;
+  --pad: clamp(1.5rem, 5vw, 4rem);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--dark);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ===== TYPOGRAPHY SCALE ===== */
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
+
+p { font-weight: 300; color: var(--muted); }
+
+a { text-decoration: none; color: inherit; }
+
+img { display: block; max-width: 100%; }
+
+/* ===== UTILS ===== */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+/* ===== NAV ===== */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(23,44,55,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(151,192,14,0.18);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+#nav.scrolled {
+  background: rgba(23,44,55,0.98);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+.nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo img { height: 55px; width: auto; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  padding: 0 18px;
+  font-family: var(--font-title);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav-links li a:hover { color: var(--white); border-bottom-color: var(--lime); }
+.nav-cta {
+  background: var(--lime);
+  color: var(--navy-dk) !important;
+  border-radius: var(--radius-sm) !important;
+  height: 38px !important;
+  padding: 0 20px !important;
+  font-weight: 600 !important;
+  border-bottom: none !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--lime-lt) !important; border-bottom: none !important; }
+
+/* ===== HERO ===== */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--navy-dk);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.22;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(23,44,55,0.97) 45%, rgba(23,44,55,0.6) 75%, rgba(23,44,55,0.3) 100%);
+}
+.hero-accent {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(151,192,14,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-accent-2 {
+  position: absolute;
+  bottom: -80px;
+  left: 40%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(44,92,162,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+h1{
+  color:white;
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 120px var(--pad) 80px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--lime);
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--lime);
+}
+.hero h1 {
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.hero h1 .accent { color: var(--lime); }
+.hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(255,255,255,0.55) !important;
+  margin: 20px 0 36px;
+  font-weight: 300;
+  max-width: 500px;
+}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+.btn-primary {
+  background: var(--lime);
+  color: var(--navy-dk);
+}
+.btn-primary:hover { background: var(--lime-lt); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(151,192,14,0.3); }
+.btn-secondary {
+  border:1px solid var(--lime) !important; color: var(--lime);
+}
+.btn-secondary:hover { border-color: var(--lime); color: var(--lime); }
+
+.hero-metrics {
+  display: flex;
+  gap: 36px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.hero-metric .n {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--lime);
+  line-height: 1;
+}
+.hero-metric .l {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 4px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* HERO RIGHT PANEL */
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  border: 0.5px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: default;
+}
+.hero-card:hover {
+  background: rgba(151,192,14,0.08);
+  border-color: rgba(151,192,14,0.3);
+}
+.hc-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(151,192,14,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hc-icon svg { width: 20px; height: 20px; }
+.hc-title {
+  font-family: var(--font-title);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+}
+.hc-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 2px;
+}
+
+/* ===== SECTION BASE ===== */
+.section { padding: clamp(60px, 8vw, 100px) 0; }
+.section-alt { background: var(--off); }
+
+.section-header { text-align: center; margin-bottom: clamp(40px, 5vw, 60px); }
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 14px;
+}
+.section-header h2 { color: var(--navy-dk); }
+.section-header p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 12px auto 0;
+  font-weight: 300;
+}
+
+/* ===== TRUST BAR ===== */
+#trust {
+  background: var(--navy-dk);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(151,192,14,0.12);
+}
+.trust-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.trust-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--lime); }
+
+/* ===== SERVICES OVERVIEW ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.service-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--gray);
+  padding: 32px 28px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--lime), var(--lime-lt));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.service-card:hover::before { transform: scaleX(1); }
+.sc-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(151,192,14,0.12), rgba(151,192,14,0.06));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.sc-icon svg { width: 24px; height: 24px; }
+.sc-num {
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--lime);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.service-card h3 { color: var(--navy-dk); margin-bottom: 10px; font-size: 1.05rem; }
+.service-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.sc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lime);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: gap 0.2s;
+}
+.service-card:hover .sc-link { gap: 10px; }
+
+/* ===== WHY US ===== */
+#why { background: var(--navy-dk); }
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px var(--pad);
+}
+.why-img-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+.why-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.why-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(23,44,55,0.85) 100%);
+}
+.why-badge {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  right: 28px;
+  background: rgba(151,192,14,0.95);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.wb-num {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-dk);
+  line-height: 1;
+}
+.wb-label {
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy-dk);
+  letter-spacing: 0.5px;
+}
+.why-content .eyebrow { margin-bottom: 14px; }
+.why-content h2 { color: var(--white); margin-bottom: 16px; }
+.why-content > p { color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 36px; }
+.why-list { display: flex; flex-direction: column; gap: 24px; }
+.why-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  transition: background 0.2s, border-color 0.2s;
+}
+.why-item:hover {
+  background: rgba(151,192,14,0.07);
+  border-color: rgba(151,192,14,0.2);
+}
+.wi-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(151,192,14,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.wi-icon svg { width: 20px; height: 20px; }
+.wi-title {
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.wi-desc { font-size: 13px; color: rgba(255,255,255,0.5); font-weight: 300; }
+
+/* ===== PRODUCTS ===== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+.product-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  background: var(--navy-dk);
+  aspect-ratio: 3/4;
+  cursor: default;
+}
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  opacity: 0.5;
+}
+.product-card:hover img { transform: scale(1.06); }
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(23,44,55,0.95) 100%);
+}
+.product-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px;
+}
+.product-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(151,192,14,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 1px solid rgba(151,192,14,0.3);
+}
+.product-icon svg { width: 20px; height: 20px; }
+.product-card h3 {
+  font-family: var(--font-title);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.product-norm {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--lime);
+  background: rgba(151,192,14,0.12);
+  border: 0.5px solid rgba(151,192,14,0.3);
+  padding: 2px 7px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ===== PROCESS ===== */
+.process-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.process-track::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--lime) 0%, var(--blue) 100%);
+  z-index: 0;
+}
+.process-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+.ps-num {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--lime);
+  position: relative;
+  z-index: 1;
+  transition: background 0.2s, color 0.2s;
+}
+.process-step:hover .ps-num { background: var(--lime); color: var(--white); }
+.process-step h3 { font-size: 1rem; color: var(--navy-dk); margin-bottom: 8px; }
+.process-step p { font-size: 13px; }
+
+/* ===== STATS ===== */
+#stats {
+  background: linear-gradient(135deg, var(--navy-dk) 0%, var(--navy) 60%, #1a3a4a 100%);
+  padding: clamp(60px, 8vw, 80px) 0;
+  position: relative;
+  overflow: hidden;
+}
+#stats::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(151,192,14,0.1) 0%, transparent 70%);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.stat-item {
+  text-align: center;
+  padding: 32px 20px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+}
+.stat-item:last-child { border-right: none; }
+.stat-n {
+  font-family: var(--font-title);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--lime);
+  line-height: 1;
+}
+.stat-suffix { color: var(--lime-lt); }
+.stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 8px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== TESTIMONIAL / CTA ===== */
+#cta {
+  background: var(--off);
+  position: relative;
+  overflow: hidden;
+}
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 60px;
+  align-items: center;
+}
+.cta-text h2 { color: var(--navy-dk); margin-bottom: 16px; }
+.cta-text p { font-size: 15px; margin-bottom: 32px; }
+.cta-features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
+.cta-feat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+}
+.cf-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cf-check svg { width: 12px; height: 12px; }
+.cta-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray);
+}
+.cta-card h3 { color: var(--navy-dk); font-size: 1.2rem; margin-bottom: 6px; }
+.cta-card > p { font-size: 14px; margin-bottom: 28px; color: var(--muted); }
+.form-group { margin-bottom: 16px; }
+.form-group label {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--dark);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus { border-color: var(--lime); }
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%23234350' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.btn-full { width: 100%; justify-content: center; padding: 15px; font-size: 14px; }
+.form-note { text-align: center; margin-top: 12px; font-size: 12px; color: var(--muted); }
+.form-note svg { width: 12px; height: 12px; vertical-align: middle; margin-right: 4px; }
+
+/* ===== CONTACT BAR ===== */
+#contact-bar {
+  background: var(--navy-dk);
+  padding: 40px 0;
+}
+.contact-bar-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.cb-team { display: flex; gap: 20px; flex-wrap: wrap; }
+.cb-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+}
+.cb-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--lime), var(--lime-dk));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy-dk);
+  flex-shrink: 0;
+}
+.cb-name {
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+}
+.cb-phone { font-size: 11px; color: var(--lime); margin-top: 1px; }
+.cb-wsp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: var(--white);
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+.cb-wsp:hover { background: #1db954; }
+.cb-wsp svg { width: 20px; height: 20px; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0d1c23;
+  padding: 60px 0 28px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  margin-bottom: 48px;
+}
+.footer-logo img { height: 65px; margin-bottom: 16px; }
+.footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 24px; }
+.footer-social { display: flex; gap: 10px; }
+.fs-item {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.fs-item:hover { background: rgba(151,192,14,0.15); }
+.fs-item svg { width: 16px; height: 16px; }
+.footer-col h4 {
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links li a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s;
+}
+.footer-links li a:hover { color: var(--lime); }
+.footer-bottom {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px var(--pad) 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.3); }
+.footer-norms { display: flex; gap: 8px; flex-wrap: wrap; }
+.fn { font-size: 10px; padding: 3px 9px; border-radius: 10px; background: rgba(151,192,14,0.1); color: var(--lime); border: 0.5px solid rgba(151,192,14,0.2); }
+
+/* ===== WAB FAB ===== */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 52px;
+  height: 52px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.whatsapp-fab:hover { transform: scale(1.08); box-shadow: 0 8px 24px rgba(37,211,102,0.5); }
+.whatsapp-fab svg { width: 28px; height: 28px; fill: white; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim { opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
+.d1 { animation-delay: 0.1s; }
+.d2 { animation-delay: 0.2s; }
+.d3 { animation-delay: 0.3s; }
+.d4 { animation-delay: 0.4s; }
+.d5 { animation-delay: 0.5s; }
+.d6 { animation-delay: 0.6s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-panel { display: grid; grid-template-columns: 1fr 1fr; }
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-img-wrap { aspect-ratio: 16/6; }
+  .cta-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .process-track { grid-template-columns: 1fr 1fr; }
+  .process-track::before { display: none; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-panel { grid-template-columns: 1fr; }
+  .trust-inner { gap: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- WhatsApp FAB -->
+<a class="whatsapp-fab" href="https://wa.me/527226734341" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<header>
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/" aria-label="DEZ Systems México — Inicio">
+        <img src="imgs/white.png" alt="DEZ Systems México" height="42">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="#contacto" class="nav-cta">Cotizar ahora</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<main>
+<section id="hero" aria-label="Hero principal">
+  <div class="hero-bg" role="presentation" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-accent" aria-hidden="true"></div>
+  <div class="hero-accent-2" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Consultoría · Gestión · Normatividad</p>
+      <h1 class="anim d1">Tu empresa en <span class="accent">cumplimiento total</span> con la normativa mexicana</h1>
+      <p class="hero-sub anim d2">Somos tu aliado estratégico en seguridad laboral, medio ambiente, protección civil y gestión de proyectos. 28 servicios especializados en un solo lugar.</p>
+      <div class="hero-btns anim d3">
+        <a href="#contacto" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          Diagnóstico 
+        </a>
+        <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
+      </div>
+      <div class="hero-metrics anim d4">
+        <div class="hero-metric"><div class="n">28<span style="font-size:1.2rem">+</span></div><div class="l">Servicios</div></div>
+        <div class="hero-metric"><div class="n">ISO</div><div class="l">9001 · 14001 · 45001</div></div>
+        <div class="hero-metric"><div class="n">STPS</div><div class="l">Cumplimiento garantizado</div></div>
+      </div>
+    </div>
+    <div class="hero-panel anim d5">
+      <div class="hero-card">
+        <div class="hc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div><div class="hc-title">Consultoría STPS</div><div class="hc-sub">Cumplimiento normativo integral</div></div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div><div class="hc-title">Protección Civil</div><div class="hc-sub">PIPC y planes de emergencia</div></div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="15" x2="12" y2="15"/></svg>
+        </div>
+        <div><div class="hc-title">Normas ISO</div><div class="hc-sub">Asesoría e implementación</div></div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+        </div>
+        <div><div class="hc-title">Gestión de Proyectos</div><div class="hc-sub">Construcción y dictámenes</div></div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div><div class="hc-title">Cobertura Nacional</div><div class="hc-sub">Presencial y remoto</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div id="trust" aria-hidden="true">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="trust-dot"></div>STPS Certificado</div>
+    <div class="trust-item"><div class="trust-dot"></div>ISO 9001 · 14001 · 45001</div>
+    <div class="trust-item"><div class="trust-dot"></div>SEMARNAT</div>
+    <div class="trust-item"><div class="trust-dot"></div>Protección Civil</div>
+    <div class="trust-item"><div class="trust-dot"></div>Unidad de Verificación</div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section id="stats" aria-label="Estadísticas">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-n">28<span class="stat-suffix">+</span></div>
+      <div class="stat-label">Servicios especializados</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">3</div>
+      <div class="stat-label">Normas ISO disponibles</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">5</div>
+      <div class="stat-label">Líneas de productos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">100<span class="stat-suffix">%</span></div>
+      <div class="stat-label">Cumplimiento garantizado</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="servicios" class="section" aria-label="Servicios principales">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Lo que hacemos</span>
+      <h2>Soluciones normativas de extremo a extremo</h2>
+      <p>Cubrimos todo el ciclo de cumplimiento: desde el diagnóstico inicial hasta la certificación y el mantenimiento continuo.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="sc-num">01 — 06</div>
+        <h3>Consultoría STPS y Medio Ambiente</h3>
+        <p>Consultoría integral STPS y ambiental, capacitación normativa, asesoría ISO y dictámenes de gas. Tu empresa cumple, opera sin riesgo.</p>
+        <div class="sc-link">
+          Ver detalle
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+      <article class="service-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="sc-num">07 — 12</div>
+        <h3>Protección Civil y Dictámenes</h3>
+        <p>Programa Interno de Protección Civil (PIPC), dictámenes eléctricos, estructurales, de gas y verificación ante autoridades.</p>
+        <div class="sc-link">
+          Ver detalle
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+      <article class="service-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="sc-num">13 — 18</div>
+        <h3>Gestión Gubernamental</h3>
+        <p>Planes de emergencia, gestoría ante SEMARNAT y dependencias gubernamentales, estructurales y eléctricos.</p>
+        <div class="sc-link">
+          Ver detalle
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+      <article class="service-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="sc-num">19 — 24</div>
+        <h3>Ingeniería y Proyectos</h3>
+        <p>Sanitarios e hidrosanitarios, renderizado 3D, estudios de mecánica de suelos y levantamiento topográfico.</p>
+        <div class="sc-link">
+          Ver detalle
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+      <article class="service-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+        </div>
+        <div class="sc-num">25 — 26</div>
+        <h3>Construcción y Cálculo Estructural</h3>
+        <p>Cálculos estructurales, gestión y ejecución completa de proyectos de construcción con supervisión técnica especializada.</p>
+        <div class="sc-link">
+          Ver detalle
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+      <article class="service-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="sc-num">27 — 28</div>
+        <h3>Mantenimiento Especializado</h3>
+        <p>Mantenimiento a subestaciones eléctricas, transformadores y sistemas contra incendios. Operación continua sin interrupciones.</p>
+        <div class="sc-link">
+          Ver detalle
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="/servicios" class="btn btn-primary">Ver catálogo completo de servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="nosotros" aria-label="Por qué DEZ Systems">
+  <div id="why">
+    <div class="why-grid">
+      <div class="why-img-wrap">
+        <img src="imgs/nomativa.jpg" alt="Ingenieros de DEZ Systems México en campo" loading="lazy" width="600" height="750">
+        <div class="why-img-overlay"></div>
+        <div class="why-badge">
+          <div class="wb-num">28<span style="font-size:1.2rem">+</span></div>
+          <div class="wb-label">Servicios especializados<br>en un solo proveedor</div>
+        </div>
+      </div>
+      <div class="why-content">
+        <span class="eyebrow">Por qué elegirnos</span>
+        <h2 style="color:white">La empresa que cuida tu cumplimiento para que tú cuides tu negocio</h2>
+        <p>Nos especializamos en hacer tu empresa segura, legalmente sólida y certificable — sin complicaciones ni múltiples proveedores.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="wi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <div class="wi-title">Servicio integral en un solo proveedor</div>
+              <div class="wi-desc">Señalética, EPP y dictámenes — todo el ciclo normativo con un mismo equipo.</div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="wi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <div>
+              <div class="wi-title">Expertos certificados en normativa mexicana</div>
+              <div class="wi-desc">Especialistas en STPS, SEMARNAT, protección civil e ISO 9001, 14001 y 45001.</div>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="wi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div class="wi-title">Gestión completa de trámites</div>
+              <div class="wi-desc">Acompañamiento desde el diagnóstico hasta la gestión ante STPS, SEMARNAT y protección civil.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="productos" class="section section-alt" aria-label="Línea de productos">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Línea de productos</span>
+      <h2>Equipo de seguridad certificado</h2>
+      <p>Todo lo que tu empresa necesita para operar con seguridad, conforme a la normativa oficial.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="imgs/senaletica.png" alt="Señalética de seguridad e higiene" loading="lazy" width="300" height="400">
+        <div class="product-overlay"></div>
+        <div class="product-body">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>Señalética</h3>
+          <span class="product-norm">NOM-026-STPS-2008</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="imgs/incendios.jpg" alt="Equipo contra incendios" loading="lazy" width="300" height="400">
+        <div class="product-overlay"></div>
+        <div class="product-body">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+          </div>
+          <h3>Equipo contra incendios</h3>
+          <span class="product-norm">Instalación incluida</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="imgs/IMG.png" alt="Equipo de Protección Personal EPP" loading="lazy" width="300" height="400">
+        <div class="product-overlay"></div>
+        <div class="product-body">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>EPP</h3>
+          <span class="product-norm">NOM-017-STPS-2024</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="imgs/alerta.jpeg" alt="Alarmas sísmicas certificadas" loading="lazy" width="300" height="400">
+        <div class="product-overlay"></div>
+        <div class="product-body">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <h3>Alarmas sísmicas</h3>
+          <span class="product-norm">Mantenimiento incluido</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="imgs/Atención a emergencias.jpg" alt="Equipos de atención a emergencias" loading="lazy" width="300" height="400">
+        <div class="product-overlay"></div>
+        <div class="product-body">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Atención a emergencias</h3>
+          <span class="product-norm">Brigadas de emergencia</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="/productos" class="btn btn-primary">Ver catálogo de productos</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="proceso" class="section" aria-label="Nuestro proceso de trabajo">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Nuestro proceso</span>
+      <h2>Así trabajamos contigo</h2>
+      <p>Un método claro y probado que lleva a tu empresa del diagnóstico al cumplimiento total.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-step">
+        <div class="ps-num">1</div>
+        <h3>Diagnóstico</h3>
+        <p>Evaluamos el estado normativo actual de tu empresa, sin costo y sin compromisos.</p>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">2</div>
+        <h3>Plan personalizado</h3>
+        <p>Diseñamos una ruta de cumplimiento con tiempos, responsables y costos definidos.</p>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">3</div>
+        <h3>Implementación</h3>
+        <p>Ejecutamos documentación, estudios de laboratorio, trámites y capacitaciones.</p>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">4</div>
+        <h3>Seguimiento continuo</h3>
+        <p>Mantenemos tu empresa actualizada ante cambios normativos y próximas auditorías.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / FORM -->
+<section id="contacto" class="section section-alt" aria-label="Contacto y diagnóstico gratuito">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="cta-text">
+        <span class="eyebrow">Empieza hoy</span>
+        <h2>¿Listo para operar con total tranquilidad?</h2>
+        <p>Solicita tu diagnóstico y recibe una propuesta personalizada en menos de 24 horas hábiles.</p>
+        <div class="cta-features">
+          <div class="cta-feat">
+            <div class="cf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Propuesta en 24 horas hábiles
+          </div>
+          <div class="cta-feat">
+            <div class="cf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Atención presencial y remota en todo México
+          </div>
+          <div class="cta-feat">
+            <div class="cf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Expertos certificados en STPS, ISO y Protección Civil
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="tel:+527226734341" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            Llamar ahora
+          </a>
+          <a href="https://wa.me/527226734341" class="btn btn-secondary" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="cta-card">
+        <h3>Solicitar diagnóstico gratuito</h3>
+        <p>Nuestro equipo se comunica contigo en menos de 24 h.</p>
+        <form action="#" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required>
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nombre de empresa" autocomplete="organization" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="442 000 0000" autocomplete="tel" required>
+          </div>
+          <div class="form-group">
+            <label for="servicio">Servicio de interés</label>
+            <select id="servicio" name="servicio">
+              <option value="">Selecciona una opción</option>
+              <option>Consultoría STPS</option>
+              <option>Protección Civil / PIPC</option>
+              <option>Normas ISO</option>
+              <option>Dictámenes (eléctrico / estructural / gas)</option>
+              <option>Proyectos de construcción</option>
+              <option>Productos de seguridad</option>
+              <option>Varios / No sé aún</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Enviar solicitud
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </form>
+        <p class="form-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          Tus datos están protegidos. No compartimos tu información.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <img src="imgs/white.png" alt="DEZ Systems México" height="38">
+      </div>
+      <p class="footer-desc">Consultoría y gestión integral en seguridad laboral, medio ambiente, protección civil y proyectos de construcción. Tu aliado normativo en México.</p>
+      <div class="footer-social">
+        <a class="fs-item" href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul class="footer-links">
+        <li><a href="/servicios">Consultoría STPS</a></li>
+        <li><a href="/servicios">Medio ambiente</a></li>
+        <li><a href="/servicios">Protección civil</a></li>
+        <li><a href="/servicios">Normas ISO</a></li>
+        <li><a href="/servicios">Dictámenes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul class="footer-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/productos">Productos</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="/aviso-privacidad">Aviso de privacidad</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+527132445270">713 244 5270</a></li>
+        <li><a href="mailto:contacto@dezsystemsmexico.com">contacto@dezsystemsmexico.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DEZ Systems México. Todos los derechos reservados.</p>
+    <div class="footer-norms">
+      <span class="fn">STPS</span>
+      <span class="fn">SEMARNAT</span>
+      <span class="fn">ISO 9001</span>
+      <span class="fn">ISO 14001</span>
+      <span class="fn">ISO 45001</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Nav scroll effect */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+/* Scroll-triggered reveal */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.service-card, .why-item, .process-step, .product-card, .stat-item').forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = `opacity 0.6s ease ${i * 0.08}s, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.08}s`;
+  observer.observe(el);
+});
+
+/* Smooth scroll for anchor links */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+
+</body>
+</html>
