@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios | DEZ Systems México</title>
+<meta name="description" content="28 servicios especializados en consultoría STPS, protección civil, normas ISO, dictámenes, ingeniería y mantenimiento. DEZ Systems México.">
+<meta name="keywords" content="consultoría STPS, protección civil, ISO 9001, ISO 14001, ISO 45001, dictámenes eléctricos, planos, señalética, EPP, México">
+<meta property="og:title" content="Servicios | DEZ Systems México">
+<meta property="og:description" content="28 servicios especializados en cumplimiento normativo, ingeniería y protección civil.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dezsystemsmexico.com/servicios">
+<link rel="canonical" href="https://dezsystemsmexico.com/servicios">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+@font-face{font-family:'Myriad';src:url('./fonts/MYRIADPRO.OTF') format('opentype');font-weight:normal;font-style:normal}
+@font-face{font-family:'Nasalization';src:url('./fonts/Nasalization.otf') format('opentype');font-weight:normal;font-style:normal}
+:root{
+  --lime:#97c00e;--lime-dk:#7aa00b;--lime-lt:#b8de3a;
+  --navy:#234350;--navy-dk:#172c37;--navy-lt:#2e5a6e;
+  --blue:#2c5ca2;--white:#ffffff;--off:#f5f7f4;--gray:#e8eceb;
+  --muted:#6b7f79;--dark:#111c20;
+  --font-title:'Nasalization',sans-serif;
+  --font-body:'Myriad',sans-serif;
+  --radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-xl:24px;
+  --shadow-sm:0 2px 8px rgba(35,67,80,0.08);
+  --shadow-md:0 8px 32px rgba(35,67,80,0.12);
+  --shadow-lg:0 20px 60px rgba(35,67,80,0.18);
+  --max:1200px;--pad:clamp(1.5rem,5vw,4rem)
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--white);color:var(--dark);font-size:16px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-title);font-weight:600;line-height:1.2;letter-spacing:-0.01em}
+h1{font-size:clamp(2rem,4vw,3.2rem)}
+h2{font-size:clamp(1.6rem,3vw,2.4rem)}
+h3{font-size:clamp(1rem,1.8vw,1.2rem)}
+p{font-weight:300;color:var(--muted)}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(23,44,55,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(151,192,14,0.18);transition:background 0.3s,box-shadow 0.3s}
+#nav.scrolled{background:rgba(23,44,55,0.98);box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo img{height:55px;width:auto}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none}
+.nav-links li a{display:flex;align-items:center;height:68px;padding:0 18px;font-family:var(--font-title);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);letter-spacing:0.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s}
+.nav-links li a:hover,.nav-links li a.active{color:var(--white);border-bottom-color:var(--lime)}
+.nav-cta{background:var(--lime);color:var(--navy-dk)!important;border-radius:var(--radius-sm)!important;height:38px!important;padding:0 20px!important;font-weight:600!important;border-bottom:none!important;transition:background 0.2s!important}
+.nav-cta:hover{background:var(--lime-lt)!important}
+.page-hero{position:relative;background:var(--navy-dk);padding:140px var(--pad) 80px;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background-image:url('imgs/Normatividad\ Laboral.png');background-size:cover;background-position:center;opacity:0.15}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(23,44,55,0.98) 50%,rgba(23,44,55,0.7) 100%)}
+.page-hero-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto}
+.eyebrow{display:inline-block;font-family:var(--font-title);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+.page-hero h1{color:var(--white);margin-bottom:16px}
+.page-hero p{color:rgba(255,255,255,0.6);font-size:16px;max-width:560px;font-weight:300}
+.filter-bar{background:var(--white);border-bottom:1px solid var(--gray);padding:20px var(--pad);position:sticky;top:68px;z-index:100}
+.filter-inner{max-width:var(--max);margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.filter-btn{font-family:var(--font-title);font-size:12px;font-weight:500;letter-spacing:0.5px;text-transform:uppercase;padding:8px 18px;border-radius:20px;border:1px solid var(--gray);background:var(--white);color:var(--muted);cursor:pointer;transition:all 0.2s}
+.filter-btn:hover{border-color:var(--lime);color:var(--lime)}
+.filter-btn.active{background:var(--lime);color:var(--navy-dk);border-color:var(--lime)}
+.section{padding:clamp(60px,8vw,60px) 0}
+.section-alt{background:var(--off)}
+.section-header{text-align:center;margin-bottom:clamp(40px,5vw,60px)}
+.section-header h2{color:var(--navy-dk)}
+.section-header p{font-size:16px;color:var(--muted);max-width:520px;margin:12px auto 0;font-weight:300}
+.cat-section{margin-bottom:60px}
+.cat-header{display:flex;align-items:center;gap:16px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--gray)}
+.cat-icon{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,rgba(151,192,14,0.15),rgba(151,192,14,0.06));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cat-icon svg{width:24px;height:24px}
+.cat-label{font-family:var(--font-title);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--lime);margin-bottom:4px}
+.cat-title{font-family:var(--font-title);font-size:1.2rem;font-weight:600;color:var(--navy-dk)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.service-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--white);border:1px solid var(--gray);padding:28px 24px;transition:transform 0.3s,box-shadow 0.3s;cursor:default}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--lime),var(--lime-lt));transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.service-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.service-card:hover::before{transform:scaleX(1)}
+.sc-num{font-family:var(--font-title);font-size:11px;font-weight:600;color:var(--lime);letter-spacing:1px;margin-bottom:8px;text-transform:uppercase}
+.service-card h3{color:var(--navy-dk);margin-bottom:10px;font-size:1rem}
+.service-card p{font-size:13px;color:var(--muted);line-height:1.6}
+.sc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.sc-tag{font-size:10px;padding:3px 8px;border-radius:10px;background:rgba(151,192,14,0.08);color:var(--navy);border:0.5px solid rgba(151,192,14,0.25);font-weight:500;font-family:var(--font-title);letter-spacing:0.3px}
+.cta-banner{background:linear-gradient(135deg,var(--navy-dk) 0%,var(--navy) 60%,#1a3a4a 100%);padding:clamp(50px,7vw,80px) var(--pad);text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(151,192,14,0.1) 0%,transparent 70%)}
+.cta-banner h2{color:var(--white);margin-bottom:14px;position:relative}
+.cta-banner p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;position:relative}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-title);font-size:14px;font-weight:600;letter-spacing:0.3px;padding:14px 28px;border-radius:var(--radius-sm);cursor:pointer;transition:all 0.2s;border:none;text-decoration:none}
+.btn-primary{background:var(--lime);color:var(--navy-dk)}
+.btn-primary:hover{background:var(--lime-lt);transform:translateY(-1px);box-shadow:0 8px 24px rgba(151,192,14,0.3)}
+.btn-secondary{background:transparent;color:var(--white);border:1px solid var(--lime)!important;color:var(--lime)}
+.btn-secondary:hover{background:rgba(151,192,14,0.08)}
+.btn-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+footer{background:#0d1c23;padding:60px 0 28px;border-top:1px solid rgba(255,255,255,0.05)}
+.footer-grid{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:40px;max-width:var(--max);margin:0 auto;padding:0 var(--pad);margin-bottom:48px}
+.footer-logo img{height:65px;margin-bottom:16px}
+.footer-desc{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:24px}
+.footer-social{display:flex;gap:10px}
+.fs-item{width:34px;height:34px;border-radius:6px;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+.fs-item:hover{background:rgba(151,192,14,0.15)}
+.fs-item svg{width:16px;height:16px}
+.footer-col h4{font-family:var(--font-title);font-size:12px;font-weight:600;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links li a{font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s}
+.footer-links li a:hover{color:var(--lime)}
+.footer-bottom{max-width:var(--max);margin:0 auto;padding:24px var(--pad) 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.3)}
+.footer-norms{display:flex;gap:8px;flex-wrap:wrap}
+.fn{font-size:10px;padding:3px 9px;border-radius:10px;background:rgba(151,192,14,0.1);color:var(--lime);border:0.5px solid rgba(151,192,14,0.2)}
+.whatsapp-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:999;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s}
+.whatsapp-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(37,211,102,0.5)}
+.whatsapp-fab svg{width:28px;height:28px;fill:white}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.services-grid{grid-template-columns:1fr}}
+.footer-links li a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;          /* espacio entre el svg y el texto */
+}
+
+.footer-links li a svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;    /* evita que el svg se comprima */
+  opacity: 0.6;
+}
+
+.footer-links li a:hover svg {
+  opacity: 1;        /* el svg se ilumina junto con el texto en hover */
+}
+</style>
+</head>
+<body>
+<a class="whatsapp-fab" href="https://wa.me/527226734341" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<header>
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a class="nav-logo" href="Home.html" aria-label="DEZ Systems México — Inicio">
+        <img src="imgs/white.png" alt="DEZ Systems México" height="55">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="Servicios.html" class="active">Servicios</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html" class="nav-cta">Cotizar ahora</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="page-hero" aria-label="Servicios DEZ Systems">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <span class="eyebrow">Catálogo completo</span>
+      <h1>28 servicios especializados<br>para tu empresa</h1>
+      <p>Cubrimos todo el ciclo normativo: desde el diagnóstico inicial hasta la certificación, gestión de trámites y mantenimiento continuo.</p>
+    </div>
+  </section>
+
+  <div class="filter-bar" role="navigation" aria-label="Filtrar por categoría">
+    <div class="filter-inner">
+      <button class="filter-btn active" onclick="filterCat('all',this)">Todos</button>
+      <button class="filter-btn" onclick="filterCat('stps',this)">STPS y Ambiente</button>
+      <button class="filter-btn" onclick="filterCat('civil',this)">Protección Civil</button>
+      <button class="filter-btn" onclick="filterCat('ingenieria',this)">Ingeniería</button>
+      <button class="filter-btn" onclick="filterCat('mant',this)">Mantenimiento</button>
+    </div>
+  </div>
+
+  <section class="section" id="catalogo" aria-label="Catálogo de servicios">
+    <div class="container">
+      <div id="services-container"></div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <h2>¿Necesitas más de un servicio?</h2>
+    <p>Tenemos paquetes combinados. Cuéntanos tu situación y armamos la solución ideal para tu empresa.</p>
+    <div class="btn-group">
+      <a href="Contacto.html" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        Solicitar cotización
+      </a>
+      <a href="https://wa.me/527226734341" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp directo</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="imgs/white.png" alt="DEZ Systems México"></div>
+      <p class="footer-desc">Consultoría y gestión integral en seguridad laboral, medio ambiente, protección civil y proyectos de construcción. Tu aliado normativo en México.</p>
+      <div class="footer-social">
+        <a class="fs-item" href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul class="footer-links">
+        <li><a href="Servicios.html">Consultoría STPS</a></li>
+        <li><a href="Servicios.html">Medio ambiente</a></li>
+        <li><a href="Servicios.html">Protección civil</a></li>
+        <li><a href="Servicios.html">Normas ISO</a></li>
+        <li><a href="Servicios.html">Dictámenes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul class="footer-links">
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li>
+          <a href="tel:+527132445270">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            713 244 5270
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contacto@dezsystemsmexico.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@dezsystemsmexico.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DEZ Systems México. Todos los derechos reservados.</p>
+    <div class="footer-norms">
+      <span class="fn">STPS</span><span class="fn">SEMARNAT</span><span class="fn">ISO 9001</span><span class="fn">ISO 14001</span><span class="fn">ISO 45001</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+const categories=[
+  {id:'stps',label:'STPS y Medio Ambiente',icon:'<svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',services:[
+    {n:'01',t:'Consultoría Integral STPS',d:'Diagnóstico, implementación y seguimiento de todas las normas STPS aplicables. Identificamos riesgos, desarrollamos programas y acompañamos en inspecciones.',tags:['STPS','Diagnóstico','Normatividad']},
+    {n:'02',t:'Consultoría Integral Medio Ambiente',d:'Identificación y gestión de requisitos ambientales ante SEMARNAT. Elaboración de manifiestos, licencias y cumplimiento de la normativa ambiental vigente.',tags:['SEMARNAT','Ambiental','Licencias']},
+    {n:'03',t:'Capacitación Normativa STPS / SEMARNAT',d:'Cursos y talleres especializados para tu equipo sobre normativa laboral y ambiental. Constancias oficiales y evidencia documental incluidas.',tags:['Capacitación','STPS','SEMARNAT']},
+    {n:'04',t:'Asesoría e Implementación ISO 9001, 14001, 45001',d:'Diseño e implementación de sistemas de gestión de calidad, ambiental y seguridad ocupacional desde cero hasta la pre-auditoría de certificación.',tags:['ISO 9001','ISO 14001','ISO 45001']},
+    {n:'05',t:'Certificación de Normas ISO',d:'Acompañamiento completo en el proceso de certificación ante organismos acreditados. Gestión de auditorías, acciones correctivas y seguimiento post-certificación.',tags:['Certificación','ISO','Auditoría']},
+    {n:'06',t:'Dictámenes de Gas',d:'Revisión, peritaje y emisión de dictámenes técnicos de instalaciones de gas LP y natural conforme a la NOM vigente.',tags:['Gas','Dictamen','NOM']},
+    {n:'11',t:'Dictámenes por Unidad de Verificación Normas STPS',d:'Verificación formal de cumplimiento normativo ante organismos acreditados por la EMA. Trámite completo y seguimiento hasta la obtención del dictamen.',tags:['Verificación','STPS','EMA']},
+    {n:'15',t:'Gestoría de Trámites SEMARNAT',d:'Representación y gestión integral de trámites ante SEMARNAT: Manifiestos de impacto ambiental, licencias, autorizaciones y renovaciones.',tags:['SEMARNAT','Trámites','Licencias']},
+    {n:'16',t:'Estudios de Gabinete Normas STPS',d:'Análisis documental y evaluaciones técnicas de escritorio para determinar el cumplimiento normativo y elaborar los programas requeridos.',tags:['Gabinete','STPS','Evaluación']},
+    {n:'17',t:'Estudios de Laboratorio para Normas STPS',d:'Mediciones de ruido, iluminación, calor extremo, agentes químicos y más. Laboratorios certificados por la EMA con metodología conforme a norma.',tags:['Laboratorio','Mediciones','EMA']},
+  ]},
+  {id:'civil',label:'Protección Civil y Dictámenes',icon:'<svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',services:[
+    {n:'07',t:'Programa Interno de Protección Civil (PIPC)',d:'Elaboración, registro y actualización del Programa Interno de Protección Civil conforme a la Ley General de Protección Civil y legislación estatal.',tags:['PIPC','Protección Civil','Emergencias']},
+    {n:'08',t:'Dictámenes Eléctricos',d:'Verificación técnica de instalaciones eléctricas para operación, trámites de apertura o renovación de licencias. Peritos certificados.',tags:['Eléctrico','Dictamen','Instalaciones']},
+    {n:'09',t:'Dictámenes Estructurales',d:'Evaluación de la integridad estructural de inmuebles y construcciones por ingenieros certificados. Reporte técnico oficial con validez ante autoridades.',tags:['Estructural','Dictamen','Inmuebles']},
+    {n:'10',t:'Dictámenes de Gas',d:'Peritaje y certificación de redes e instalaciones de gas con emisión de dictamen técnico oficial conforme a normas NOM-002 y NOM-004.',tags:['Gas','Dictamen','NOM-002']},
+    {n:'12',t:'Inicio de Operaciones',d:'Gestión integral de permisos, licencias y autorizaciones para nuevo establecimiento o cambio de giro. Acompañamiento ante todas las dependencias involucradas.',tags:['Licencias','Apertura','Permisos']},
+    {n:'13',t:'Planes de Emergencia',d:'Elaboración de planes de respuesta a emergencias para brigadas internas: incendio, sismo, evacuación y primeros auxilios. Simulacros incluidos.',tags:['Emergencias','Brigadas','Simulacros']},
+    {n:'14',t:'Gestoría de Trámites Gubernamentales',d:'Representación y seguimiento profesional ante STPS, Protección Civil, SEMARNAT, IMSS y otras dependencias federales y estatales.',tags:['Trámites','Gubernamental','Gestión']},
+  ]},
+  {id:'ingenieria',label:'Ingeniería y Proyectos',icon:'<svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',services:[
+    {n:'18',t:'Planos Arquitectónicos, Estructurales y Eléctricos',d:'Elaboración de planos para trámites de licencia, remodelaciones y obra nueva. Firmados por profesional con cédula.',tags:['Planos','Arquitectura','Ingeniería']},
+    {n:'19',t:'Planos de Sistemas vs Incendios',d:'Diseño de sistemas de detección y supresión de incendios conforme a NFPA y normativa mexicana. Memorias de cálculo incluidas.',tags:['Incendios','NFPA','Planos']},
+    {n:'20',t:'Planos de Sistemas Especiales',d:'CCTV, voz y datos, automatización, control de acceso y sistemas de seguridad electrónica. Diseño y especificación técnica completa.',tags:['CCTV','Automatización','Seguridad']},
+    {n:'21',t:'Planos Sanitarios e Hidrosanitarios',d:'Diseño de redes de agua potable, drenaje sanitario, pluvial y sistemas hidráulicos para obra civil y industrial.',tags:['Sanitario','Hidráulico','Planos']},
+    {n:'22',t:'Renderizado de Proyectos',d:'Visualización 3D fotorrealista de proyectos arquitectónicos, industriales y de ingeniería. Recorridos virtuales y animaciones disponibles.',tags:['3D','Render','Visualización']},
+    {n:'23',t:'Estudios de Mecánica de Suelos',d:'Análisis geotécnico y sondeos para determinación de capacidad de carga, tipo de cimentación y diseño estructural.',tags:['Suelos','Geotécnico','Cimentación']},
+    {n:'24',t:'Levantamiento Topográfico',d:'Medición y representación gráfica del terreno con equipo GPS y estación total certificados. Curvas de nivel y cálculo de volúmenes.',tags:['Topografía','GPS','Terreno']},
+    {n:'25',t:'Cálculos Estructurales',d:'Memoria de cálculo para estructura de acero, concreto armado, mampostería y mixta conforme a normas NTC y NTCDF.',tags:['Estructural','Cálculo','NTC']},
+    {n:'26',t:'Gestión y Ejecución de Proyectos de Construcción',d:'Dirección técnica, supervisión de obra y administración de proyectos de construcción civil e industrial. Control de calidad y costos.',tags:['Construcción','Supervisión','Proyectos']},
+  ]},
+  {id:'mant',label:'Mantenimiento Especializado',icon:'<svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>',services:[
+    {n:'27',t:'Mantenimiento a Subestaciones Eléctricas y Transformadores',d:'Mantenimiento preventivo y correctivo a subestaciones, transformadores de distribución y equipos de potencia. Pruebas eléctricas y reportes técnicos.',tags:['Eléctrico','Subestaciones','Mantenimiento']},
+    {n:'28',t:'Mantenimiento a Sistemas vs Incendios',d:'Revisión periódica, recarga, sustitución y mantenimiento de extintores, detectores, rociadores y sistemas de supresión. Bitácoras incluidas.',tags:['Incendios','Extintores','Mantenimiento']},
+  ]},
+];
+
+let currentCat='all';
+
+function renderServices(cat){
+  const container=document.getElementById('services-container');
+  container.innerHTML='';
+  const filtered=cat==='all'?categories:categories.filter(c=>c.id===cat);
+  filtered.forEach(cat=>{
+    const section=document.createElement('div');
+    section.className='cat-section';
+    section.innerHTML=`
+      <div class="cat-header">
+        <div class="cat-icon">${cat.icon}</div>
+        <div>
+          <div class="cat-label">${cat.id==='stps'?'01–11 · 15–17':cat.id==='civil'?'07–14':cat.id==='ingenieria'?'18–26':'27–28'}</div>
+          <div class="cat-title">${cat.label}</div>
+        </div>
+      </div>
+      <div class="services-grid">
+        ${cat.services.map(s=>`
+          <article class="service-card">
+            <div class="sc-num">Servicio ${s.n}</div>
+            <h3>${s.t}</h3>
+            <p>${s.d}</p>
+            <div class="sc-tags">${s.tags.map(t=>`<span class="sc-tag">${t}</span>`).join('')}</div>
+          </article>
+        `).join('')}
+      </div>
+    `;
+    container.appendChild(section);
+  });
+  document.querySelectorAll('.service-card').forEach((el,i)=>{
+    el.style.opacity='0';el.style.transform='translateY(20px)';
+    setTimeout(()=>{el.style.transition='opacity 0.5s ease,transform 0.5s ease';el.style.opacity='1';el.style.transform='translateY(0)'},i*40);
+  });
+}
+
+function filterCat(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  currentCat=cat;
+  renderServices(cat);
+}
+
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+renderServices('all');
+</script>
+</body>
+</html>

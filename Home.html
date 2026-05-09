@@ -946,6 +946,29 @@ footer {
   .hero-panel { grid-template-columns: 1fr; }
   .trust-inner { gap: 20px; }
 }
+.footer-links li a:hover {
+    color: var(--lime);
+}
+
+.footer-links li a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;          /* espacio entre el svg y el texto */
+}
+
+.footer-links li a svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;    /* evita que el svg se comprima */
+  opacity: 0.6;
+}
+
+.footer-links li a:hover svg {
+  opacity: 1;        /* el svg se ilumina junto con el texto en hover */
+}
 </style>
 </head>
 <body>
@@ -963,12 +986,11 @@ footer {
         <img src="imgs/white.png" alt="DEZ Systems México" height="42">
       </a>
       <ul class="nav-links" role="list">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#proceso">Proceso</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="#contacto" class="nav-cta">Cotizar ahora</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html" class="nav-cta">Cotizar ahora</a></li>
       </ul>
     </div>
   </nav>
@@ -1394,9 +1416,7 @@ footer {
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">
-        <img src="imgs/white.png" alt="DEZ Systems México" height="38">
-      </div>
+      <div class="footer-logo"><img src="imgs/white.png" alt="DEZ Systems México"></div>
       <p class="footer-desc">Consultoría y gestión integral en seguridad laboral, medio ambiente, protección civil y proyectos de construcción. Tu aliado normativo en México.</p>
       <div class="footer-social">
         <a class="fs-item" href="#" aria-label="LinkedIn">
@@ -1413,43 +1433,49 @@ footer {
     <div>
       <h4>Servicios</h4>
       <ul class="footer-links">
-        <li><a href="/servicios">Consultoría STPS</a></li>
-        <li><a href="/servicios">Medio ambiente</a></li>
-        <li><a href="/servicios">Protección civil</a></li>
-        <li><a href="/servicios">Normas ISO</a></li>
-        <li><a href="/servicios">Dictámenes</a></li>
+        <li><a href="Servicios.html">Consultoría STPS</a></li>
+        <li><a href="Servicios.html">Medio ambiente</a></li>
+        <li><a href="Servicios.html">Protección civil</a></li>
+        <li><a href="Servicios.html">Normas ISO</a></li>
+        <li><a href="Servicios.html">Dictámenes</a></li>
       </ul>
     </div>
     <div>
       <h4>Empresa</h4>
       <ul class="footer-links">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/productos">Productos</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="/aviso-privacidad">Aviso de privacidad</a></li>
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
       </ul>
     </div>
     <div>
       <h4>Contacto</h4>
       <ul class="footer-links">
-        <li><a href="tel:+527132445270">713 244 5270</a></li>
-        <li><a href="mailto:contacto@dezsystemsmexico.com">contacto@dezsystemsmexico.com</a></li>
+        <li>
+          <a href="tel:+527132445270">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            713 244 5270
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contacto@dezsystemsmexico.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@dezsystemsmexico.com
+          </a>
+        </li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <p>© 2026 DEZ Systems México. Todos los derechos reservados.</p>
     <div class="footer-norms">
-      <span class="fn">STPS</span>
-      <span class="fn">SEMARNAT</span>
-      <span class="fn">ISO 9001</span>
-      <span class="fn">ISO 14001</span>
-      <span class="fn">ISO 45001</span>
+      <span class="fn">STPS</span><span class="fn">SEMARNAT</span><span class="fn">ISO 9001</span><span class="fn">ISO 14001</span><span class="fn">ISO 45001</span>
     </div>
   </div>
 </footer>
-
+ 
 <script>
 /* Nav scroll effect */
 const nav = document.getElementById('nav');

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | DEZ Systems México</title>
+<meta name="description" content="Artículos y recursos sobre normatividad laboral, seguridad industrial, protección civil, normas ISO y medio ambiente en México. DEZ Systems México.">
+<meta name="keywords" content="blog normatividad, STPS, seguridad laboral, protección civil, ISO 9001, ISO 14001, ISO 45001, SEMARNAT, México">
+<meta property="og:title" content="Blog de Normatividad | DEZ Systems México">
+<meta property="og:description" content="Recursos y artículos para mantener tu empresa actualizada en cumplimiento normativo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dezsystemsmexico.com/blog">
+<link rel="canonical" href="https://dezsystemsmexico.com/blog">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+@font-face{font-family:'Myriad';src:url('./fonts/MYRIADPRO.OTF') format('opentype');font-weight:normal;font-style:normal}
+@font-face{font-family:'Nasalization';src:url('./fonts/Nasalization.otf') format('opentype');font-weight:normal;font-style:normal}
+:root{
+  --lime:#97c00e;--lime-dk:#7aa00b;--lime-lt:#b8de3a;
+  --navy:#234350;--navy-dk:#172c37;--navy-lt:#2e5a6e;
+  --blue:#2c5ca2;--white:#ffffff;--off:#f5f7f4;--gray:#e8eceb;
+  --muted:#6b7f79;--dark:#111c20;
+  --font-title:'Nasalization',sans-serif;
+  --font-body:'Myriad',sans-serif;
+  --radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-xl:24px;
+  --shadow-sm:0 2px 8px rgba(35,67,80,0.08);
+  --shadow-md:0 8px 32px rgba(35,67,80,0.12);
+  --max:1200px;--pad:clamp(1.5rem,5vw,4rem)
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--white);color:var(--dark);font-size:16px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-title);font-weight:600;line-height:1.2;letter-spacing:-0.01em}
+h1{font-size:clamp(2rem,4vw,3.2rem)}
+h2{font-size:clamp(1.6rem,3vw,2.4rem)}
+h3{font-size:clamp(1rem,1.8vw,1.15rem)}
+p{font-weight:300;color:var(--muted)}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(23,44,55,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(151,192,14,0.18);transition:background 0.3s,box-shadow 0.3s}
+#nav.scrolled{background:rgba(23,44,55,0.98);box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo img{height:55px;width:auto}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none}
+.nav-links li a{display:flex;align-items:center;height:68px;padding:0 18px;font-family:var(--font-title);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);letter-spacing:0.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s}
+.nav-links li a:hover,.nav-links li a.active{color:var(--white);border-bottom-color:var(--lime)}
+.nav-cta{background:var(--lime);color:var(--navy-dk)!important;border-radius:var(--radius-sm)!important;height:38px!important;padding:0 20px!important;font-weight:600!important;border-bottom:none!important}
+.nav-cta:hover{background:var(--lime-lt)!important}
+.page-hero{position:relative;background:var(--navy-dk);padding:140px var(--pad) 80px;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80&auto=format&fit=crop');background-size:cover;background-position:center;opacity:0.15}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(23,44,55,0.98) 50%,rgba(23,44,55,0.7) 100%)}
+.page-hero-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto}
+.eyebrow{display:inline-block;font-family:var(--font-title);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+.page-hero h1{color:var(--white);margin-bottom:16px}
+.page-hero p{color:rgba(255,255,255,0.6);font-size:16px;max-width:560px;font-weight:300}
+.section{padding:clamp(60px,8vw,90px) 0}
+.section-alt{background:var(--off)}
+.blog-layout{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.blog-featured{margin-bottom:48px}
+.featured-card{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius-xl);overflow:hidden;background:var(--white);border:1px solid var(--gray);transition:box-shadow 0.3s}
+.featured-card:hover{box-shadow:var(--shadow-md)}
+.fc-img{position:relative;aspect-ratio:4/3}
+.fc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.featured-card:hover .fc-img img{transform:scale(1.04)}
+.fc-body{padding:36px 32px;display:flex;flex-direction:column;justify-content:center}
+.blog-tag{display:inline-block;font-family:var(--font-title);font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--navy-dk);background:rgba(151,192,14,0.12);border:0.5px solid rgba(151,192,14,0.3);padding:4px 10px;border-radius:20px;margin-bottom:14px}
+.fc-body h2{font-size:clamp(1.2rem,2vw,1.5rem);color:var(--navy-dk);margin-bottom:12px;line-height:1.3}
+.fc-body p{font-size:14px;line-height:1.7;margin-bottom:20px}
+.fc-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:var(--muted);margin-bottom:20px}
+.fc-meta span{display:flex;align-items:center;gap:5px}
+.fc-meta svg{width:13px;height:13px}
+.read-more{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-title);font-size:12px;font-weight:600;color:var(--lime);letter-spacing:0.5px;text-transform:uppercase;transition:gap 0.2s}
+.read-more:hover{gap:10px}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.blog-card{border-radius:var(--radius-lg);overflow:hidden;background:var(--white);border:1px solid var(--gray);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}
+.blog-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.bc-img{position:relative;aspect-ratio:16/9;overflow:hidden}
+.bc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.blog-card:hover .bc-img img{transform:scale(1.05)}
+.bc-body{padding:22px 20px;flex:1;display:flex;flex-direction:column}
+.bc-body h3{color:var(--navy-dk);margin:10px 0 10px;font-size:1rem;line-height:1.3}
+.bc-body p{font-size:13px;line-height:1.6;flex:1}
+.bc-meta{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--gray)}
+.bc-date{font-size:11px;color:var(--muted);font-family:var(--font-title);letter-spacing:0.3px}
+.sidebar{display:flex;flex-direction:column;gap:24px}
+.sidebar-card{background:var(--white);border:1px solid var(--gray);border-radius:var(--radius-lg);padding:24px}
+.sidebar-title{font-family:var(--font-title);font-size:12px;font-weight:600;color:var(--navy-dk);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--lime)}
+.topic-list{display:flex;flex-direction:column;gap:0}
+.topic-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--gray);cursor:pointer;transition:color 0.2s}
+.topic-item:last-child{border-bottom:none}
+.topic-item:hover .topic-name{color:var(--lime)}
+.topic-name{font-size:13px;color:var(--dark);font-weight:300;transition:color 0.2s}
+.topic-count{font-family:var(--font-title);font-size:11px;font-weight:600;color:var(--lime);background:rgba(151,192,14,0.1);padding:2px 8px;border-radius:10px}
+.newsletter-card{background:var(--navy-dk);border:none}
+.newsletter-card .sidebar-title{color:var(--lime);border-bottom-color:rgba(151,192,14,0.3)}
+.newsletter-card p{font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:16px;font-weight:300}
+.nl-input{width:100%;padding:11px 14px;border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-sm);background:rgba(255,255,255,0.06);color:var(--white);font-family:var(--font-body);font-size:14px;outline:none;margin-bottom:10px}
+.nl-input::placeholder{color:rgba(255,255,255,0.35)}
+.nl-input:focus{border-color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-title);font-size:13px;font-weight:600;letter-spacing:0.3px;padding:12px 20px;border-radius:var(--radius-sm);cursor:pointer;transition:all 0.2s;border:none;text-decoration:none;width:100%;justify-content:center}
+.btn-primary{background:var(--lime);color:var(--navy-dk)}
+.btn-primary:hover{background:var(--lime-lt)}
+.recent-post{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--gray)}
+.recent-post:last-child{border-bottom:none}
+.rp-img{width:60px;height:60px;border-radius:var(--radius-md);overflow:hidden;flex-shrink:0}
+.rp-img img{width:100%;height:100%;object-fit:cover}
+.rp-title{font-size:12px;color:var(--dark);font-weight:400;line-height:1.4;margin-bottom:4px}
+.rp-date{font-size:11px;color:var(--muted)}
+.cta-banner{background:linear-gradient(135deg,var(--navy-dk) 0%,var(--navy) 60%,#1a3a4a 100%);padding:clamp(50px,7vw,80px) var(--pad);text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(151,192,14,0.1) 0%,transparent 70%)}
+.cta-banner h2{color:var(--white);margin-bottom:14px;position:relative}
+.cta-banner>p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;position:relative}
+.btn-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-title);font-size:14px;font-weight:600;padding:14px 28px;border-radius:var(--radius-sm);cursor:pointer;transition:all 0.2s;border:none;text-decoration:none}
+.btn-cta.primary{background:var(--lime);color:var(--navy-dk)}
+.btn-cta.primary:hover{background:var(--lime-lt);transform:translateY(-1px)}
+.btn-cta.secondary{background:transparent;color:var(--lime);border:1px solid var(--lime)!important}
+footer{background:#0d1c23;padding:60px 0 28px;border-top:1px solid rgba(255,255,255,0.05)}
+.footer-grid{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:40px;max-width:var(--max);margin:0 auto;padding:0 var(--pad);margin-bottom:48px}
+.footer-logo img{height:65px;margin-bottom:16px}
+.footer-desc{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:24px}
+.footer-social{display:flex;gap:10px}
+.fs-item{width:34px;height:34px;border-radius:6px;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+.fs-item:hover{background:rgba(151,192,14,0.15)}
+.fs-item svg{width:16px;height:16px}
+.footer-col h4{font-family:var(--font-title);font-size:12px;font-weight:600;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links li a{font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s}
+.footer-links li a:hover{color:var(--lime)}
+.footer-bottom{max-width:var(--max);margin:0 auto;padding:24px var(--pad) 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.3)}
+.footer-norms{display:flex;gap:8px;flex-wrap:wrap}
+.fn{font-size:10px;padding:3px 9px;border-radius:10px;background:rgba(151,192,14,0.1);color:var(--lime);border:0.5px solid rgba(151,192,14,0.2)}
+.whatsapp-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:999;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s}
+.whatsapp-fab:hover{transform:scale(1.08)}
+.whatsapp-fab svg{width:28px;height:28px;fill:white}
+@media(max-width:1024px){.blog-layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr;gap:20px}.featured-card{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.sidebar{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}}
+.footer-links li a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;          /* espacio entre el svg y el texto */
+}
+
+.footer-links li a svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;    /* evita que el svg se comprima */
+  opacity: 0.6;
+}
+
+.footer-links li a:hover svg {
+  opacity: 1;        /* el svg se ilumina junto con el texto en hover */
+}
+</style>
+</head>
+<body>
+<a class="whatsapp-fab" href="https://wa.me/527226734341" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<header>
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a class="nav-logo" href="Home.html" aria-label="DEZ Systems México — Inicio">
+        <img src="imgs/white.png" alt="DEZ Systems México">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Blog.html" class="active">Blog</a></li>
+        <li><a href="Contacto.html" class="nav-cta">Cotizar ahora</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="page-hero" aria-label="Blog DEZ Systems">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <span class="eyebrow">Recursos y conocimiento</span>
+      <h1>Blog de normatividad<br>y seguridad laboral</h1>
+      <p>Artículos actualizados para que tu empresa siempre esté al día con la regulación mexicana en seguridad, ambiente y protección civil.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Artículos del blog">
+    <div class="container">
+      <div class="blog-layout">
+        <div class="blog-main">
+
+
+          <span class="eyebrow" style="margin-bottom:24px;display:block">Últimos artículos</span>
+          <div class="blog-grid">
+            <article class="blog-card">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&auto=format&fit=crop" alt="Programa Interno de Protección Civil guía paso a paso" loading="lazy" width="600" height="338">
+              </div>
+              <div class="bc-body">
+                <span class="blog-tag">Protección Civil</span>
+                <h3>PIPC: Guía paso a paso para elaborar tu Programa Interno de Protección Civil</h3>
+                <p>El PIPC es obligatorio para muchas empresas en México. Conoce los requisitos, el proceso de registro y los errores más comunes que debes evitar.</p>
+                <div class="bc-meta">
+                  <span class="bc-date">Abril 2025</span>
+                  <a href="#" class="read-more" style="font-size:11px">Leer más <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80&auto=format&fit=crop" alt="ISO 14001 beneficios certificación ambiental empresa" loading="lazy" width="600" height="338">
+              </div>
+              <div class="bc-body">
+                <span class="blog-tag">ISO 14001</span>
+                <h3>Certificación ISO 14001: beneficios reales para tu empresa en México</h3>
+                <p>Más allá del papel, la ISO 14001 reduce costos operativos, abre puertas a nuevos clientes y mejora la reputación de tu empresa ante autoridades.</p>
+                <div class="bc-meta">
+                  <span class="bc-date">Marzo 2025</span>
+                  <a href="#" class="read-more" style="font-size:11px">Leer más <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80&auto=format&fit=crop" alt="Dictámenes eléctricos qué son y cuándo son obligatorios" loading="lazy" width="600" height="338">
+              </div>
+              <div class="bc-body">
+                <span class="blog-tag">Dictámenes</span>
+                <h3>Dictámenes eléctricos: ¿qué son, quién los necesita y cómo obtenerlos?</h3>
+                <p>Los dictámenes eléctricos son indispensables para licencias, cambios de uso de suelo y verificaciones. Todo lo que debes saber en una sola lectura.</p>
+                <div class="bc-meta">
+                  <span class="bc-date">Febrero 2025</span>
+                  <a href="#" class="read-more" style="font-size:11px">Leer más <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&auto=format&fit=crop" alt="ISO 45001 seguridad y salud ocupacional implementación" loading="lazy" width="600" height="338">
+              </div>
+              <div class="bc-body">
+                <span class="blog-tag">ISO 45001</span>
+                <h3>ISO 45001: cómo reducir accidentes laborales y mejorar tu clima organizacional</h3>
+                <p>La norma ISO 45001 va más allá del cumplimiento: transforma la cultura de seguridad de tu empresa. Te explicamos cómo implementarla en 6 pasos.</p>
+                <div class="bc-meta">
+                  <span class="bc-date">Enero 2025</span>
+                  <a href="#" class="read-more" style="font-size:11px">Leer más <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80&auto=format&fit=crop" alt="Consultoría STPS qué incluye y por qué contratarla" loading="lazy" width="600" height="338">
+              </div>
+              <div class="bc-body">
+                <span class="blog-tag">STPS</span>
+                <h3>¿Qué incluye una consultoría integral STPS y cuándo necesitas una?</h3>
+                <p>Antes de una inspección de la STPS, es vital conocer tu estado normativo. Te explicamos qué abarca una consultoría completa y cuánto tiempo toma regularizarse.</p>
+                <div class="bc-meta">
+                  <span class="bc-date">Diciembre 2024</span>
+                  <a href="#" class="read-more" style="font-size:11px">Leer más <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Mantenimiento extintores requisitos NOM Mexico" loading="lazy" width="600" height="338">
+              </div>
+              <div class="bc-body">
+                <span class="blog-tag">Seguridad</span>
+                <h3>Mantenimiento de extintores: frecuencias, registros y lo que exige la norma</h3>
+                <p>Tener extintores no es suficiente. La NOM-002-STPS establece frecuencias de revisión obligatorias y penalidades por incumplimiento que debes conocer.</p>
+                <div class="bc-meta">
+                  <span class="bc-date">Noviembre 2024</span>
+                  <a href="#" class="read-more" style="font-size:11px">Leer más <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="sidebar" aria-label="Panel lateral del blog">
+          <div class="sidebar-card newsletter-card">
+            <div class="sidebar-title">Boletín normativo</div>
+            <p>Recibe cada mes las actualizaciones más importantes en normatividad laboral y ambiental.</p>
+            <input class="nl-input" type="email" placeholder="Tu correo electrónico" aria-label="Correo para boletín">
+            <button class="btn btn-primary">Suscribirme</button>
+          </div>
+          <div class="sidebar-card">
+            <div class="sidebar-title">Temas</div>
+            <div class="topic-list">
+              <div class="topic-item"><span class="topic-name">STPS y Normatividad</span><span class="topic-count">8</span></div>
+              <div class="topic-item"><span class="topic-name">Protección Civil</span><span class="topic-count">5</span></div>
+              <div class="topic-item"><span class="topic-name">Normas ISO</span><span class="topic-count">6</span></div>
+              <div class="topic-item"><span class="topic-name">Medio ambiente</span><span class="topic-count">4</span></div>
+              <div class="topic-item"><span class="topic-name">Dictámenes</span><span class="topic-count">3</span></div>
+              <div class="topic-item"><span class="topic-name">Seguridad industrial</span><span class="topic-count">7</span></div>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <div class="sidebar-title">Artículos recientes</div>
+            <div class="topic-list">
+              <div class="recent-post">
+                <div class="rp-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=120&q=70&auto=format&fit=crop" alt="PIPC artículo" loading="lazy" width="60" height="60"></div>
+                <div><div class="rp-title">PIPC: Guía paso a paso para elaborar tu programa</div><div class="rp-date">Abril 2025</div></div>
+              </div>
+              <div class="recent-post">
+                <div class="rp-img"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=120&q=70&auto=format&fit=crop" alt="ISO 14001 artículo" loading="lazy" width="60" height="60"></div>
+                <div><div class="rp-title">ISO 14001: beneficios reales para tu empresa</div><div class="rp-date">Marzo 2025</div></div>
+              </div>
+              <div class="recent-post">
+                <div class="rp-img"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=120&q=70&auto=format&fit=crop" alt="Dictámenes eléctricos artículo" loading="lazy" width="60" height="60"></div>
+                <div><div class="rp-title">Dictámenes eléctricos: qué son y cómo obtenerlos</div><div class="rp-date">Febrero 2025</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-card" style="background:var(--navy-dk);border:none">
+            <div class="sidebar-title" style="color:var(--lime);border-bottom-color:rgba(151,192,14,0.3)">¿Tienes una duda?</div>
+            <p style="color:rgba(255,255,255,0.55);font-size:13px;margin-bottom:16px">Nuestros expertos responden en menos de 24 horas.</p>
+            <a href="Contacto.html" class="btn btn-primary">Consultar ahora</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <h2>¿Tienes una duda normativa específica?</h2>
+    <p>Nuestro equipo de expertos está listo para orientarte sin costo y sin compromisos.</p>
+    <div class="btn-group">
+      <a href="Contacto.html" class="btn-cta primary">Consultar a un experto</a>
+      <a href="https://wa.me/527226734341" class="btn-cta secondary" target="_blank" rel="noopener">WhatsApp directo</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="imgs/white.png" alt="DEZ Systems México"></div>
+      <p class="footer-desc">Consultoría y gestión integral en seguridad laboral, medio ambiente, protección civil y proyectos de construcción. Tu aliado normativo en México.</p>
+      <div class="footer-social">
+        <a class="fs-item" href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul class="footer-links">
+        <li><a href="Servicios.html">Consultoría STPS</a></li>
+        <li><a href="Servicios.html">Medio ambiente</a></li>
+        <li><a href="Servicios.html">Protección civil</a></li>
+        <li><a href="Servicios.html">Normas ISO</a></li>
+        <li><a href="Servicios.html">Dictámenes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul class="footer-links">
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li>
+          <a href="tel:+527132445270">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            713 244 5270
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contacto@dezsystemsmexico.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@dezsystemsmexico.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DEZ Systems México. Todos los derechos reservados.</p>
+    <div class="footer-norms">
+      <span class="fn">STPS</span><span class="fn">SEMARNAT</span><span class="fn">ISO 9001</span><span class="fn">ISO 14001</span><span class="fn">ISO 45001</span>
+    </div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+</script>
+</body>
+</html>

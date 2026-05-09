@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | DEZ Systems México</title>
+<meta name="description" content="Conoce al equipo de DEZ Systems México. Expertos en consultoría STPS, protección civil, normas ISO y proyectos de ingeniería con presencia en todo México.">
+<meta name="keywords" content="DEZ Systems México, quiénes somos, equipo, consultoría normativa, STPS, ISO, protección civil">
+<meta property="og:title" content="Nosotros | DEZ Systems México">
+<meta property="og:description" content="Expertos en cumplimiento normativo, seguridad laboral y proyectos de ingeniería en México.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dezsystemsmexico.com/nosotros">
+<link rel="canonical" href="https://dezsystemsmexico.com/nosotros">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+@font-face{font-family:'Myriad';src:url('./fonts/MYRIADPRO.OTF') format('opentype');font-weight:normal;font-style:normal}
+@font-face{font-family:'Nasalization';src:url('./fonts/Nasalization.otf') format('opentype');font-weight:normal;font-style:normal}
+:root{
+  --lime:#97c00e;--lime-dk:#7aa00b;--lime-lt:#b8de3a;
+  --navy:#234350;--navy-dk:#172c37;--navy-lt:#2e5a6e;
+  --blue:#2c5ca2;--white:#ffffff;--off:#f5f7f4;--gray:#e8eceb;
+  --muted:#6b7f79;--dark:#111c20;
+  --font-title:'Nasalization',sans-serif;
+  --font-body:'Myriad',sans-serif;
+  --radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-xl:24px;
+  --shadow-sm:0 2px 8px rgba(35,67,80,0.08);
+  --shadow-md:0 8px 32px rgba(35,67,80,0.12);
+  --shadow-lg:0 20px 60px rgba(35,67,80,0.18);
+  --max:1200px;--pad:clamp(1.5rem,5vw,4rem)
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--white);color:var(--dark);font-size:16px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-title);font-weight:600;line-height:1.2;letter-spacing:-0.01em}
+h1{font-size:clamp(2rem,4vw,3.2rem)}
+h2{font-size:clamp(1.6rem,3vw,2.4rem)}
+h3{font-size:clamp(1rem,1.8vw,1.2rem)}
+p{font-weight:300;color:var(--muted)}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(23,44,55,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(151,192,14,0.18);transition:background 0.3s,box-shadow 0.3s}
+#nav.scrolled{background:rgba(23,44,55,0.98);box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo img{height:55px;width:auto}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none}
+.nav-links li a{display:flex;align-items:center;height:68px;padding:0 18px;font-family:var(--font-title);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);letter-spacing:0.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s}
+.nav-links li a:hover,.nav-links li a.active{color:var(--white);border-bottom-color:var(--lime)}
+.nav-cta{background:var(--lime);color:var(--navy-dk)!important;border-radius:var(--radius-sm)!important;height:38px!important;padding:0 20px!important;font-weight:600!important;border-bottom:none!important}
+.nav-cta:hover{background:var(--lime-lt)!important}
+
+/* HERO */
+.page-hero{position:relative;background:var(--navy-dk);padding:140px var(--pad) 80px;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80&auto=format&fit=crop');background-size:cover;background-position:center 30%;opacity:0.18}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(23,44,55,0.98) 50%,rgba(23,44,55,0.7) 100%)}
+.page-hero-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.eyebrow{display:inline-block;font-family:var(--font-title);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+.page-hero h1{color:var(--white);margin-bottom:16px}
+.page-hero>div>div>p{color:rgba(255,255,255,0.6);font-size:16px;font-weight:300;line-height:1.7}
+.hero-pillars{display:flex;flex-direction:column;gap:12px}
+.hero-pillar{display:flex;align-items:center;gap:14px;padding:16px 20px;background:rgba(255,255,255,0.05);border:0.5px solid rgba(151,192,14,0.2);border-radius:var(--radius-md);transition:background 0.2s}
+.hero-pillar:hover{background:rgba(151,192,14,0.08)}
+.hp-icon{width:38px;height:38px;border-radius:8px;background:rgba(151,192,14,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hp-icon svg{width:18px;height:18px}
+.hp-title{font-family:var(--font-title);font-size:13px;font-weight:600;color:var(--white)}
+.hp-sub{font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px}
+
+/* SECTIONS */
+.section{padding:clamp(60px,8vw,100px) 0}
+.section-alt{background:var(--off)}
+.section-header{text-align:center;margin-bottom:clamp(40px,5vw,60px)}
+.section-header h2{color:var(--navy-dk)}
+.section-header p{font-size:16px;color:var(--muted);max-width:520px;margin:12px auto 0;font-weight:300}
+
+/* MISIÓN VISIÓN */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:60px}
+.mv-card{border-radius:var(--radius-xl);padding:40px 36px;position:relative;overflow:hidden}
+.mv-card.mision{background:var(--navy-dk)}
+.mv-card.vision{background:linear-gradient(135deg,#1a3a4a,var(--navy))}
+.mv-card::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(151,192,14,0.12) 0%,transparent 70%)}
+.mv-label{font-family:var(--font-title);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--lime);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.mv-label::before{content:'';display:block;width:24px;height:1px;background:var(--lime)}
+.mv-card h3{font-size:1.4rem;color:var(--white);margin-bottom:14px}
+.mv-card p{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.75;font-weight:300}
+.mv-values{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.value-card{background:var(--white);border:1px solid var(--gray);border-radius:var(--radius-lg);padding:24px 20px;text-align:center;transition:transform 0.3s,box-shadow 0.3s}
+.value-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.vc-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(151,192,14,0.12),rgba(151,192,14,0.05));display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.vc-icon svg{width:24px;height:24px}
+.value-card h4{font-family:var(--font-title);font-size:13px;color:var(--navy-dk);margin-bottom:8px}
+.value-card p{font-size:13px;line-height:1.55}
+
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.story-img{position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/5}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.story-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(23,44,55,0.88) 100%)}
+.story-badge{position:absolute;bottom:28px;left:28px;right:28px;background:rgba(151,192,14,0.94);border-radius:var(--radius-md);padding:16px 20px;display:flex;align-items:center;gap:16px}
+.sb-num{font-family:var(--font-title);font-size:2.2rem;font-weight:700;color:var(--navy-dk);line-height:1}
+.sb-text{font-family:var(--font-title);font-size:12px;font-weight:600;color:var(--navy-dk);line-height:1.4}
+.story-content .eyebrow{margin-bottom:14px;display:block}
+.story-content h2{color:var(--navy-dk);margin-bottom:20px}
+.story-content p{font-size:15px;line-height:1.8;margin-bottom:16px}
+.story-content p:last-of-type{margin-bottom:28px}
+.story-norms{display:flex;flex-wrap:wrap;gap:8px}
+.sn-tag{font-family:var(--font-title);font-size:10px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:var(--navy);background:rgba(151,192,14,0.1);border:1px solid rgba(151,192,14,0.25);padding:5px 12px;border-radius:20px}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-card{border-radius:var(--radius-xl);overflow:hidden;background:var(--white);border:1px solid var(--gray);transition:transform 0.3s,box-shadow 0.3s}
+.team-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.tc-photo{position:relative;aspect-ratio:1/1;overflow:hidden;background:linear-gradient(135deg,var(--navy-dk),var(--navy-lt))}
+.tc-photo img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.5s}
+.team-card:hover .tc-photo img{transform:scale(1.05)}
+.tc-photo-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--font-title);font-size:4rem;font-weight:700;color:rgba(255,255,255,0.15)}
+.tc-accent{position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--lime),var(--lime-lt))}
+.tc-body{padding:28px 24px}
+.tc-initials{display:inline-flex;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--lime),var(--lime-dk));align-items:center;justify-content:center;font-family:var(--font-title);font-size:14px;font-weight:700;color:var(--navy-dk);margin-bottom:14px}
+.tc-body h3{color:var(--navy-dk);font-size:1.05rem;margin-bottom:4px}
+.tc-role{font-family:var(--font-title);font-size:11px;font-weight:600;color:var(--lime);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:14px}
+.tc-body p{font-size:13px;line-height:1.6;margin-bottom:18px}
+.tc-contacts{display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid var(--gray)}
+.tc-contact-link{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);transition:color 0.2s}
+.tc-contact-link:hover{color:var(--lime)}
+.tc-contact-link svg{width:14px;height:14px;flex-shrink:0;stroke:currentColor}
+
+/* COVERAGE */
+.coverage-section{background:var(--navy-dk);padding:clamp(60px,8vw,90px) 0;position:relative;overflow:hidden}
+.coverage-section::before{content:'';position:absolute;top:-120px;right:-120px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(151,192,14,0.08) 0%,transparent 70%)}
+.coverage-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.coverage-text .eyebrow{margin-bottom:14px;display:block}
+.coverage-text h2{color:var(--white);margin-bottom:16px}
+.coverage-text p{color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:32px;line-height:1.7}
+.coverage-features{display:flex;flex-direction:column;gap:14px}
+.cf-item{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);transition:background 0.2s,border-color 0.2s}
+.cf-item:hover{background:rgba(151,192,14,0.07);border-color:rgba(151,192,14,0.2)}
+.cf-icon{width:36px;height:36px;border-radius:8px;background:rgba(151,192,14,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cf-icon svg{width:18px;height:18px}
+.cf-title{font-family:var(--font-title);font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px}
+.cf-desc{font-size:12px;color:rgba(255,255,255,0.5);font-weight:300}
+.coverage-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cov-stat{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;text-align:center}
+.cov-stat-n{font-family:var(--font-title);font-size:2.8rem;font-weight:700;color:var(--lime);line-height:1;margin-bottom:8px}
+.cov-stat-l{font-size:13px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.5px;font-weight:300}
+
+/* CTA */
+.cta-banner{background:linear-gradient(135deg,var(--navy-dk) 0%,var(--navy) 60%,#1a3a4a 100%);padding:clamp(50px,7vw,80px) var(--pad);text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(151,192,14,0.1) 0%,transparent 70%)}
+.cta-banner h2{color:var(--white);margin-bottom:14px;position:relative}
+.cta-banner>p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;position:relative}
+.btn-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-title);font-size:14px;font-weight:600;letter-spacing:0.3px;padding:14px 28px;border-radius:var(--radius-sm);cursor:pointer;transition:all 0.2s;border:none;text-decoration:none}
+.btn-primary{background:var(--lime);color:var(--navy-dk)}
+.btn-primary:hover{background:var(--lime-lt);transform:translateY(-1px);box-shadow:0 8px 24px rgba(151,192,14,0.3)}
+.btn-secondary{background:transparent;color:var(--lime);border:1px solid var(--lime)!important}
+.btn-secondary:hover{background:rgba(151,192,14,0.08)}
+
+/* FOOTER */
+footer{background:#0d1c23;padding:60px 0 28px;border-top:1px solid rgba(255,255,255,0.05)}
+.footer-grid{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:40px;max-width:var(--max);margin:0 auto;padding:0 var(--pad);margin-bottom:48px}
+.footer-logo img{height:65px;margin-bottom:16px}
+.footer-desc{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:24px}
+.footer-social{display:flex;gap:10px}
+.fs-item{width:34px;height:34px;border-radius:6px;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+.fs-item:hover{background:rgba(151,192,14,0.15)}
+.fs-item svg{width:16px;height:16px}
+.footer-col h4{font-family:var(--font-title);font-size:12px;font-weight:600;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links li a{font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s;display:flex;align-items:center;gap:7px}
+.footer-links li a:hover{color:var(--lime)}
+.footer-links li a svg{width:13px;height:13px;flex-shrink:0;opacity:0.6}
+.footer-links li a:hover svg{opacity:1}
+.footer-bottom{max-width:var(--max);margin:0 auto;padding:24px var(--pad) 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.3)}
+.footer-norms{display:flex;gap:8px;flex-wrap:wrap}
+.fn{font-size:10px;padding:3px 9px;border-radius:10px;background:rgba(151,192,14,0.1);color:var(--lime);border:0.5px solid rgba(151,192,14,0.2)}
+
+/* WAB FAB */
+.whatsapp-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:999;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s}
+.whatsapp-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(37,211,102,0.5)}
+.whatsapp-fab svg{width:28px;height:28px;fill:white}
+
+/* ANIM */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .page-hero-inner{grid-template-columns:1fr}
+  .hero-pillars{display:grid;grid-template-columns:1fr 1fr}
+  .mv-grid{grid-template-columns:1fr}
+  .mv-values{grid-template-columns:1fr 1fr}
+  .story-grid{grid-template-columns:1fr}
+  .story-img{aspect-ratio:16/7}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .coverage-inner{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .team-grid{grid-template-columns:1fr}
+  .mv-values{grid-template-columns:1fr 1fr}
+  .coverage-stats{grid-template-columns:1fr 1fr}
+  .hero-pillars{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<a class="whatsapp-fab" href="https://wa.me/527132445270" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<header>
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a class="nav-logo" href="Home.html" aria-label="DEZ Systems México — Inicio">
+        <img src="imgs/white.png" alt="DEZ Systems México">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Nosotros.html" class="active">Nosotros</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html" class="nav-cta">Cotizar ahora</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero" aria-label="Quiénes somos">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <div>
+        <span class="eyebrow">Quiénes somos</span>
+        <h1>Expertos que hacen tu empresa más segura</h1>
+        <p style="color:rgba(255,255,255,0.6);font-size:16px;font-weight:300;line-height:1.7;margin-top:16px">Somos un equipo multidisciplinario de consultores e ingenieros especializados en cumplimiento normativo, seguridad laboral y proyectos de ingeniería. Operamos en todo México con presencia física y atención remota.</p>
+      </div>
+      <div class="hero-pillars">
+        <div class="hero-pillar">
+          <div class="hp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="hp-title">Cumplimiento STPS</div><div class="hp-sub">Normativa laboral vigente</div></div>
+        </div>
+        <div class="hero-pillar">
+          <div class="hp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="hp-title">Protección Civil</div><div class="hp-sub">PIPC y planes de emergencia</div></div>
+        </div>
+        <div class="hero-pillar">
+          <div class="hp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="15" x2="12" y2="15"/></svg></div>
+          <div><div class="hp-title">ISO 9001 · 14001 · 45001</div><div class="hp-sub">Asesoría y certificación</div></div>
+        </div>
+        <div class="hero-pillar">
+          <div class="hp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
+          <div><div class="hp-title">Ingeniería integral</div><div class="hp-sub">Planos, dictámenes y proyectos</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN, VISIÓN Y VALORES -->
+  <section class="section" aria-label="Misión, visión y valores">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Nuestra filosofía</span>
+        <h2>Lo que nos mueve y hacia dónde vamos</h2>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card mision">
+          <div class="mv-label">Misión</div>
+          <h3>Proteger a las empresas mexicanas mediante el cumplimiento normativo</h3>
+          <p>Ofrecemos consultoría integral, productos de seguridad y soluciones de ingeniería que permiten a nuestros clientes operar con tranquilidad, evitar sanciones y construir entornos de trabajo seguros y sostenibles.</p>
+        </div>
+        <div class="mv-card vision">
+          <div class="mv-label">Visión</div>
+          <h3>Ser el referente nacional en cumplimiento normativo y seguridad empresarial</h3>
+          <p>Aspiramos a ser la primera opción de empresas de todos los sectores que buscan un aliado confiable, técnicamente sólido y orientado a resultados en materia de seguridad, medio ambiente y gestión de proyectos.</p>
+        </div>
+      </div>
+      <div class="mv-values">
+        <div class="value-card">
+          <div class="vc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <h4>Integridad</h4>
+          <p>Actuamos con honestidad y transparencia en cada proyecto y relación con nuestros clientes.</p>
+        </div>
+        <div class="value-card">
+          <div class="vc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+          <h4>Excelencia</h4>
+          <p>Nos comprometemos con la calidad técnica y la mejora continua en todos nuestros servicios.</p>
+        </div>
+        <div class="value-card">
+          <div class="vc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h4>Compromiso</h4>
+          <p>Nos involucramos como si la empresa del cliente fuera la nuestra, con resultados como prioridad.</p>
+        </div>
+        <div class="value-card">
+          <div class="vc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h4>Innovación</h4>
+          <p>Adoptamos metodologías modernas y tecnología para entregar soluciones más eficaces y ágiles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRA HISTORIA -->
+  <section class="section section-alt" aria-label="Nuestra historia">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-img">
+          <img src="imgs/Normatividad Laboral.png" alt="Equipo DEZ Systems México en obra de construcción industrial" loading="lazy" width="800" height="1000">
+          <div class="story-img-overlay"></div>
+          <div class="story-badge">
+            <div class="sb-num">28<span style="font-size:1.4rem">+</span></div>
+            <div class="sb-text">Servicios especializados<br>en un solo equipo</div>
+          </div>
+        </div>
+        <div class="story-content">
+          <span class="eyebrow">Nuestra historia</span>
+          <h2>Nacimos para resolver lo que nadie más resuelve en un solo lugar</h2>
+          <p>DEZ Systems México surge de la necesidad que detectamos en el mercado: las empresas requerían múltiples proveedores para cumplir con normatividad laboral, ambiental, protección civil e ingeniería. Cada proveedor hablaba un lenguaje diferente y los tiempos se multiplicaban.</p>
+          <p>Decidimos crear una firma que integrara todos estos servicios bajo un mismo equipo, con la profundidad técnica de especialistas y la agilidad de una empresa que entiende los tiempos del mundo empresarial mexicano.</p>
+          <p>Hoy operamos en todo México, atendemos empresas de manufactura, servicios, construcción y comercio, y nos enorgullece que la mayoría de nuestros clientes regresen por más servicios una vez que comprueban nuestra forma de trabajar.</p>
+          <div class="story-norms">
+            <span class="sn-tag">STPS</span>
+            <span class="sn-tag">SEMARNAT</span>
+            <span class="sn-tag">Protección Civil</span>
+            <span class="sn-tag">ISO 9001</span>
+            <span class="sn-tag">ISO 14001</span>
+            <span class="sn-tag">ISO 45001</span>
+            <span class="sn-tag">Ingeniería Civil</span>
+            <span class="sn-tag">Eléctrica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="section" id="equipo" aria-label="Nuestro equipo">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Equipo</span>
+        <h2>Las personas detrás de DEZ Systems</h2>
+        <p>Un equipo con experiencia real en campo, en auditorías y en proyectos de ingeniería. Conoce a quienes estarán a cargo de tu empresa.</p>
+      </div>
+      <div class="team-grid">
+
+        <article class="team-card">
+          <div class="tc-photo">
+            <div class="tc-photo-placeholder">DA</div>
+            <div class="tc-accent"></div>
+          </div>
+          <div class="tc-body">
+            <div class="tc-initials">DA</div>
+            <h3>David Alexander Colín Ramírez</h3>
+            <div class="tc-role">Consultor</div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="tc-photo">
+            <div class="tc-photo-placeholder">EG</div>
+            <div class="tc-accent"></div>
+          </div>
+          <div class="tc-body">
+            <div class="tc-initials">EG</div>
+            <h3>Enrique González Soto</h3>
+            <div class="tc-role">Consultor</div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="tc-photo">
+            <div class="tc-photo-placeholder">ZA</div>
+            <div class="tc-accent"></div>
+          </div>
+          <div class="tc-body">
+            <div class="tc-initials">ZA</div>
+            <h3>Zuriel Alvarez Serrano</h3>
+            <div class="tc-role">Consultor</div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COBERTURA -->
+  <section class="coverage-section" aria-label="Cobertura y forma de trabajo">
+    <div class="coverage-inner">
+      <div class="coverage-text">
+        <span class="eyebrow">Cobertura</span>
+        <h2 style="color:var(--white)">Atendemos empresas<br>en todo México</h2>
+        <p>Sin importar el tamaño de tu empresa ni el estado donde te encuentres, contamos con la capacidad para atenderte de forma presencial o remota con la misma calidad de servicio.</p>
+        <div class="coverage-features">
+          <div class="cf-item">
+            <div class="cf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="cf-title">Visitas presenciales</div><div class="cf-desc">Atención en sitio en todo el territorio nacional</div></div>
+          </div>
+          <div class="cf-item">
+            <div class="cf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div><div class="cf-title">Asesoría remota</div><div class="cf-desc">Consultoría digital para empresas de cualquier estado</div></div>
+          </div>
+          <div class="cf-item">
+            <div class="cf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div><div class="cf-title">Empresas de todos los tamaños</div><div class="cf-desc">Desde PyMEs hasta corporativos multinacionales</div></div>
+          </div>
+          <div class="cf-item">
+            <div class="cf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/><path d="M14.05 6.79a10 10 0 013.16 3.16"/><path d="M11.5 3a10 10 0 010 18"/></svg></div>
+            <div><div class="cf-title">Respuesta en 24 horas</div><div class="cf-desc">Primera propuesta en menos de un día hábil</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="coverage-stats">
+        <div class="cov-stat">
+          <div class="cov-stat-n">28<span style="font-size:1.6rem">+</span></div>
+          <div class="cov-stat-l">Servicios disponibles</div>
+        </div>
+        <div class="cov-stat">
+          <div class="cov-stat-n">3</div>
+          <div class="cov-stat-l">Normas ISO</div>
+        </div>
+        <div class="cov-stat">
+          <div class="cov-stat-n">100<span style="font-size:1.6rem">%</span></div>
+          <div class="cov-stat-l">Cumplimiento garantizado</div>
+        </div>
+        <div class="cov-stat">
+          <div class="cov-stat-n">24<span style="font-size:1.6rem">h</span></div>
+          <div class="cov-stat-l">Tiempo de respuesta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <h2>¿Listo para trabajar con nosotros?</h2>
+    <p>Solicita tu diagnóstico gratuito y conoce de primera mano cómo podemos ayudar a tu empresa.</p>
+    <div class="btn-group">
+      <a href="Contacto.html" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        Solicitar diagnóstico gratuito
+      </a>
+      <a href="https://wa.me/527132445270" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp directo</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="imgs/white.png" alt="DEZ Systems México"></div>
+      <p class="footer-desc">Consultoría y gestión integral en seguridad laboral, medio ambiente, protección civil y proyectos de construcción. Tu aliado normativo en México.</p>
+      <div class="footer-social">
+        <a class="fs-item" href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul class="footer-links">
+        <li><a href="Servicios.html">Consultoría STPS</a></li>
+        <li><a href="Servicios.html">Medio ambiente</a></li>
+        <li><a href="Servicios.html">Protección civil</a></li>
+        <li><a href="Servicios.html">Normas ISO</a></li>
+        <li><a href="Servicios.html">Dictámenes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul class="footer-links">
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li>
+          <a href="tel:+527132445270">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            713 244 5270
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contacto@dezsystemsmexico.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@dezsystemsmexico.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DEZ Systems México. Todos los derechos reservados.</p>
+    <div class="footer-norms">
+      <span class="fn">STPS</span><span class="fn">SEMARNAT</span><span class="fn">ISO 9001</span><span class="fn">ISO 14001</span><span class="fn">ISO 45001</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.opacity='1';
+      e.target.style.transform='translateY(0)';
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:0.1});
+document.querySelectorAll('.team-card,.value-card,.mv-card,.cov-stat,.cf-item').forEach((el,i)=>{
+  el.style.opacity='0';
+  el.style.transform='translateY(24px)';
+  el.style.transition=`opacity 0.6s ease ${i*0.07}s, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${i*0.07}s`;
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

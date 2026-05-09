@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos | DEZ Systems México</title>
+<meta name="description" content="Línea de productos de seguridad certificados: señalética NOM-026, equipo contra incendios, EPP NOM-017, alarmas sísmicas y equipo de emergencias. DEZ Systems México.">
+<meta name="keywords" content="señalética NOM-026, EPP NOM-017, extintores, alarmas sísmicas, equipo contra incendios, equipo de emergencias, México">
+<meta property="og:title" content="Productos de Seguridad | DEZ Systems México">
+<meta property="og:description" content="Equipo de seguridad certificado conforme a norma. Señalética, EPP, extintores, alarmas y más.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dezsystemsmexico.com/productos">
+<link rel="canonical" href="https://dezsystemsmexico.com/productos">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+@font-face{font-family:'Myriad';src:url('./fonts/MYRIADPRO.OTF') format('opentype');font-weight:normal;font-style:normal}
+@font-face{font-family:'Nasalization';src:url('./fonts/Nasalization.otf') format('opentype');font-weight:normal;font-style:normal}
+:root{
+  --lime:#97c00e;--lime-dk:#7aa00b;--lime-lt:#b8de3a;
+  --navy:#234350;--navy-dk:#172c37;--navy-lt:#2e5a6e;
+  --blue:#2c5ca2;--white:#ffffff;--off:#f5f7f4;--gray:#e8eceb;
+  --muted:#6b7f79;--dark:#111c20;
+  --font-title:'Nasalization',sans-serif;
+  --font-body:'Myriad',sans-serif;
+  --radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-xl:24px;
+  --shadow-sm:0 2px 8px rgba(35,67,80,0.08);
+  --shadow-md:0 8px 32px rgba(35,67,80,0.12);
+  --shadow-lg:0 20px 60px rgba(35,67,80,0.18);
+  --max:1200px;--pad:clamp(1.5rem,5vw,4rem)
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--white);color:var(--dark);font-size:16px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-title);font-weight:600;line-height:1.2;letter-spacing:-0.01em}
+h1{font-size:clamp(2rem,4vw,3.2rem)}
+h2{font-size:clamp(1.6rem,3vw,2.4rem)}
+h3{font-size:clamp(1rem,1.8vw,1.2rem)}
+p{font-weight:300;color:var(--muted)}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(23,44,55,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(151,192,14,0.18);transition:background 0.3s,box-shadow 0.3s}
+#nav.scrolled{background:rgba(23,44,55,0.98);box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo img{height:55px;width:auto}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none}
+.nav-links li a{display:flex;align-items:center;height:68px;padding:0 18px;font-family:var(--font-title);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);letter-spacing:0.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s}
+.nav-links li a:hover,.nav-links li a.active{color:var(--white);border-bottom-color:var(--lime)}
+.nav-cta{background:var(--lime);color:var(--navy-dk)!important;border-radius:var(--radius-sm)!important;height:38px!important;padding:0 20px!important;font-weight:600!important;border-bottom:none!important}
+.nav-cta:hover{background:var(--lime-lt)!important}
+.page-hero{position:relative;background:var(--navy-dk);padding:140px var(--pad) 80px;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background-image:url('imgs/Equipo\ de\ Protección\ Personal.png');background-size:cover;background-position:center 40%;opacity:0.18}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(23,44,55,0.98) 50%,rgba(23,44,55,0.7) 100%)}
+.page-hero-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto}
+.eyebrow{display:inline-block;font-family:var(--font-title);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+.page-hero h1{color:var(--white);margin-bottom:16px}
+.page-hero p{color:rgba(255,255,255,0.6);font-size:16px;max-width:560px;font-weight:300}
+.section{padding:clamp(60px,8vw,90px) 0}
+.section-alt{background:var(--off)}
+.section-header{text-align:center;margin-bottom:clamp(40px,5vw,60px)}
+.section-header h2{color:var(--navy-dk)}
+.section-header p{font-size:16px;color:var(--muted);max-width:520px;margin:12px auto 0;font-weight:300}
+.product-feature{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:80px}
+.product-feature:last-child{margin-bottom:0}
+.product-feature.reverse{direction:rtl}
+.product-feature.reverse>*{direction:ltr}
+.pf-img{position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3}
+.pf-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease}
+.pf-img:hover img{transform:scale(1.04)}
+.pf-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(23,44,55,0.7) 100%)}
+.pf-badge{position:absolute;top:20px;left:20px;background:rgba(151,192,14,0.92);border-radius:var(--radius-sm);padding:6px 14px;font-family:var(--font-title);font-size:11px;font-weight:600;color:var(--navy-dk);letter-spacing:0.5px;text-transform:uppercase}
+.pf-content{display:flex;flex-direction:column;gap:20px}
+.pf-num{font-family:var(--font-title);font-size:11px;font-weight:600;color:var(--lime);letter-spacing:2px;text-transform:uppercase}
+.pf-content h2{color:var(--navy-dk);font-size:clamp(1.5rem,2.5vw,2rem)}
+.pf-content>p{font-size:15px;line-height:1.7}
+.pf-features{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.pf-feat{display:flex;align-items:flex-start;gap:12px}
+.pf-check{width:20px;height:20px;border-radius:50%;background:var(--lime);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.pf-check svg{width:10px;height:10px}
+.pf-feat-text{font-size:14px;color:var(--dark);font-weight:300}
+.pf-norm{display:inline-flex;align-items:center;gap:8px;margin-top:8px;background:rgba(151,192,14,0.08);border:1px solid rgba(151,192,14,0.2);border-radius:var(--radius-sm);padding:10px 16px}
+.pf-norm-label{font-family:var(--font-title);font-size:11px;font-weight:600;color:var(--lime);letter-spacing:0.5px;text-transform:uppercase}
+.pf-norm-value{font-size:13px;color:var(--navy);font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-title);font-size:14px;font-weight:600;letter-spacing:0.3px;padding:14px 28px;border-radius:var(--radius-sm);cursor:pointer;transition:all 0.2s;border:none;text-decoration:none}
+.btn-primary{background:var(--lime);color:var(--navy-dk)}
+.btn-primary:hover{background:var(--lime-lt);transform:translateY(-1px);box-shadow:0 8px 24px rgba(151,192,14,0.3)}
+.btn-secondary{background:transparent;color:var(--lime);border:1px solid var(--lime)!important}
+.btn-secondary:hover{background:rgba(151,192,14,0.08)}
+.cta-banner{background:linear-gradient(135deg,var(--navy-dk) 0%,var(--navy) 60%,#1a3a4a 100%);padding:clamp(50px,7vw,80px) var(--pad);text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(151,192,14,0.1) 0%,transparent 70%)}
+.cta-banner h2{color:var(--white);margin-bottom:14px;position:relative}
+.cta-banner p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;position:relative}
+.btn-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.norm-section{background:var(--navy-dk);padding:clamp(40px,5vw,60px) 0}
+.norm-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
+.norm-title{font-family:var(--font-title);font-size:14px;font-weight:600;color:rgba(255,255,255,0.6);letter-spacing:0.5px;text-transform:uppercase}
+.norm-tags{display:flex;gap:10px;flex-wrap:wrap}
+.norm-tag{font-family:var(--font-title);font-size:11px;font-weight:600;color:var(--lime);background:rgba(151,192,14,0.1);border:0.5px solid rgba(151,192,14,0.25);padding:6px 14px;border-radius:20px;letter-spacing:0.5px;text-transform:uppercase}
+footer{background:#0d1c23;padding:60px 0 28px;border-top:1px solid rgba(255,255,255,0.05)}
+.footer-grid{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:40px;max-width:var(--max);margin:0 auto;padding:0 var(--pad);margin-bottom:48px}
+.footer-logo img{height:65px;margin-bottom:16px}
+.footer-desc{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:24px}
+.footer-social{display:flex;gap:10px}
+.fs-item{width:34px;height:34px;border-radius:6px;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+.fs-item:hover{background:rgba(151,192,14,0.15)}
+.fs-item svg{width:16px;height:16px}
+.footer-col h4{font-family:var(--font-title);font-size:12px;font-weight:600;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links li a{font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s}
+.footer-links li a:hover{color:var(--lime)}
+.footer-bottom{max-width:var(--max);margin:0 auto;padding:24px var(--pad) 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.3)}
+.footer-norms{display:flex;gap:8px;flex-wrap:wrap}
+.fn{font-size:10px;padding:3px 9px;border-radius:10px;background:rgba(151,192,14,0.1);color:var(--lime);border:0.5px solid rgba(151,192,14,0.2)}
+.whatsapp-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:999;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s}
+.whatsapp-fab:hover{transform:scale(1.08)}
+.whatsapp-fab svg{width:28px;height:28px;fill:white}
+@media(max-width:1024px){.product-feature{grid-template-columns:1fr}.product-feature.reverse{direction:ltr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}}
+.footer-links li a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;          /* espacio entre el svg y el texto */
+}
+
+.footer-links li a svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;    /* evita que el svg se comprima */
+  opacity: 0.6;
+}
+
+.footer-links li a:hover svg {
+  opacity: 1;        /* el svg se ilumina junto con el texto en hover */
+}
+</style>
+</head>
+<body>
+<a class="whatsapp-fab" href="https://wa.me/527226734341" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<header>
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a class="nav-logo" href="Home.html" aria-label="DEZ Systems México — Inicio">
+        <img src="imgs/white.png" alt="DEZ Systems México">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li><a href="Productos.html" class="active">Productos</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html" class="nav-cta">Cotizar ahora</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="page-hero" aria-label="Productos DEZ Systems">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <span class="eyebrow">Línea de productos</span>
+      <h1>Equipo de seguridad<br>certificado conforme a norma</h1>
+      <p>Todo lo que tu empresa necesita para operar de manera segura y en cumplimiento con la normativa oficial mexicana.</p>
+    </div>
+  </section>
+
+  <div class="norm-section" aria-label="Normas que cubrimos">
+    <div class="norm-inner">
+      <div class="norm-title">Normas que cubrimos</div>
+      <div class="norm-tags">
+        <span class="norm-tag">NOM-026-STPS-2008</span>
+        <span class="norm-tag">NOM-017-STPS-2024</span>
+        <span class="norm-tag">NOM-002-STPS-2010</span>
+        <span class="norm-tag">NOM-003-SEGOB</span>
+        <span class="norm-tag">NOM-004-STPS-1999</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="productos" aria-label="Catálogo de productos">
+    <div class="container">
+
+      <div class="product-feature">
+        <div class="pf-img">
+          <img src="imgs/Señalética de seguridad e higiene.png" alt="Señalética de seguridad e higiene instalada en empresa" loading="lazy" width="800" height="600">
+          <div class="pf-img-overlay"></div>
+          <div class="pf-badge">Señalética</div>
+        </div>
+        <div class="pf-content">
+          <div class="pf-num">Producto 01</div>
+          <h2>Señalética de seguridad e higiene</h2>
+          <p>Venta e instalación de señalética de seguridad, evacuación, identificación de riesgos y áreas restringidas. Todo conforme a la normativa oficial para garantizar ambientes de trabajo seguros y ordenados.</p>
+          <div class="pf-features">
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Señales de evacuación, prohibición, obligación y advertencia</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Identificación de equipos contra incendio y primeros auxilios</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Materiales: vinilo, aluminio, acrílico y fotoluminiscente</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Instalación profesional incluida</div></div>
+          </div>
+          <div class="pf-norm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><div class="pf-norm-label">Norma aplicable</div><div class="pf-norm-value">NOM-026-STPS-2008</div></div>
+          </div>
+          <a href="Contacto.html" class="btn btn-primary" style="margin-top:8px;align-self:flex-start">Solicitar cotización
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-feature reverse">
+        <div class="pf-img">
+          <img src="imgs/Equipo contra incendios.png" alt="Extintores y equipo contra incendios industrial" loading="lazy" width="800" height="600">
+          <div class="pf-img-overlay"></div>
+          <div class="pf-badge">Vs. Incendios</div>
+        </div>
+        <div class="pf-content">
+          <div class="pf-num">Producto 02</div>
+          <h2>Equipo contra incendios</h2>
+          <p>Venta e instalación de sistemas completos de protección contra incendios para todo tipo de inmuebles e industrias. Desde extintores portátiles hasta sistemas de supresión automática.</p>
+          <div class="pf-features">
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Extintores portátiles y de carretilla en todos los agentes</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Detectores de humo, calor y gas</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Sistemas de rociadores automáticos (sprinklers)</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Instalación certificada y mantenimiento periódico</div></div>
+          </div>
+          <div class="pf-norm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><div class="pf-norm-label">Norma aplicable</div><div class="pf-norm-value">NOM-002-STPS-2010 · NFPA 10</div></div>
+          </div>
+          <a href="Contacto.html" class="btn btn-primary" style="margin-top:8px;align-self:flex-start">Solicitar cotización
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-feature">
+        <div class="pf-img">
+          <img src="imgs/Equipo de Protección Personal.png" alt="Equipo de Protección Personal EPP industrial" loading="lazy" width="800" height="600">
+          <div class="pf-img-overlay"></div>
+          <div class="pf-badge">EPP</div>
+        </div>
+        <div class="pf-content">
+          <div class="pf-num">Producto 03</div>
+          <h2>Equipo de Protección Personal</h2>
+          <p>Venta de EPP certificado para todas las industrias y niveles de riesgo. Selección técnica conforme al análisis de riesgos de tu empresa y la normativa actualizada.</p>
+          <div class="pf-features">
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Protección de cabeza, visual, auditiva y respiratoria</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Guantes, calzado de seguridad y ropa de trabajo</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Arneses y equipos de protección en alturas</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Asesoría en selección según análisis de riesgos</div></div>
+          </div>
+          <div class="pf-norm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><div class="pf-norm-label">Norma aplicable</div><div class="pf-norm-value">NOM-017-STPS-2024</div></div>
+          </div>
+          <a href="Contacto.html" class="btn btn-primary" style="margin-top:8px;align-self:flex-start">Solicitar cotización
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-feature reverse">
+        <div class="pf-img">
+          <img src="imgs/Alarmas sísmicas.png" alt="Sistema de alarma sísmica certificada" loading="lazy" width="800" height="600">
+          <div class="pf-img-overlay"></div>
+          <div class="pf-badge">Alarmas Sísmicas</div>
+        </div>
+        <div class="pf-content">
+          <div class="pf-num">Producto 04</div>
+          <h2>Alarmas sísmicas</h2>
+          <p>Venta, instalación y mantenimiento de alarmas sísmicas certificadas para industria, comercio y edificios de oficinas. Sistemas de alerta temprana que salvan vidas.</p>
+          <div class="pf-features">
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Sensores sísmicos de alta sensibilidad</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Sirenas de alerta temprana interior y exterior</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Instalación profesional con pruebas de funcionamiento</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Mantenimiento preventivo periódico incluido</div></div>
+          </div>
+          <div class="pf-norm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><div class="pf-norm-label">Norma aplicable</div><div class="pf-norm-value">NOM-003-SEGOB · Protección Civil</div></div>
+          </div>
+          <a href="Contacto.html" class="btn btn-primary" style="margin-top:8px;align-self:flex-start">Solicitar cotización
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-feature">
+        <div class="pf-img">
+          <img src="imgs/Atención a emergencias.png" alt="Equipos y botiquines de atención a emergencias" loading="lazy" width="800" height="600">
+          <div class="pf-img-overlay"></div>
+          <div class="pf-badge">Emergencias</div>
+        </div>
+        <div class="pf-content">
+          <div class="pf-num">Producto 05</div>
+          <h2>Atención a emergencias</h2>
+          <p>Equipos especializados para brigadas internas de emergencia, primeros respondientes y protección civil empresarial. Todo lo que tu equipo necesita para responder con eficacia.</p>
+          <div class="pf-features">
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Botiquines de primeros auxilios industriales y de oficina</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Desfibriladores (DEA) y equipo de reanimación</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Camillas, inmovilizadores y equipos de rescate</div></div>
+            <div class="pf-feat"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pf-feat-text">Kit de derrames y contención de materiales peligrosos</div></div>
+          </div>
+          <div class="pf-norm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#97c00e" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><div class="pf-norm-label">Norma aplicable</div><div class="pf-norm-value">NOM-005-STPS · Protección Civil</div></div>
+          </div>
+          <a href="Contacto.html" class="btn btn-primary" style="margin-top:8px;align-self:flex-start">Solicitar cotización
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <h2>¿No encuentras lo que buscas?</h2>
+    <p>Cuéntanos qué equipo necesitas y te conseguimos la solución correcta conforme a norma.</p>
+    <div class="btn-group">
+      <a href="Contacto.html" class="btn btn-primary">Solicitar producto específico</a>
+      <a href="https://wa.me/527226734341" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp directo</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="imgs/white.png" alt="DEZ Systems México"></div>
+      <p class="footer-desc">Consultoría y gestión integral en seguridad laboral, medio ambiente, protección civil y proyectos de construcción. Tu aliado normativo en México.</p>
+      <div class="footer-social">
+        <a class="fs-item" href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a class="fs-item" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul class="footer-links">
+        <li><a href="Servicios.html">Consultoría STPS</a></li>
+        <li><a href="Servicios.html">Medio ambiente</a></li>
+        <li><a href="Servicios.html">Protección civil</a></li>
+        <li><a href="Servicios.html">Normas ISO</a></li>
+        <li><a href="Servicios.html">Dictámenes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul class="footer-links">
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li>
+          <a href="tel:+527132445270">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.2 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            713 244 5270
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contacto@dezsystemsmexico.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@dezsystemsmexico.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DEZ Systems México. Todos los derechos reservados.</p>
+    <div class="footer-norms">
+      <span class="fn">STPS</span><span class="fn">SEMARNAT</span><span class="fn">ISO 9001</span><span class="fn">ISO 14001</span><span class="fn">ISO 45001</span>
+    </div>
+  </div>
+</footer>
+ 
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';observer.unobserve(e.target)}})},{threshold:0.1});
+document.querySelectorAll('.product-feature').forEach((el,i)=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition=`opacity 0.7s ease ${i*0.1}s,transform 0.7s ease ${i*0.1}s`;observer.observe(el)});
+</script>
+</body>
+</html>
